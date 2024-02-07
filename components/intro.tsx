@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import portrait from "@/public/portrait.png";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -10,7 +11,15 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-export default function Intro() {
+type Props = {
+  t: {
+    description: string[];
+    contact: string;
+    download: string;
+  }
+}
+
+export default function Intro({ t }: Props) {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -31,8 +40,8 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Ricardo portrait"
+              src={portrait}
+              alt="Neo portrait"
               width="192"
               height="192"
               quality="95"
@@ -62,11 +71,10 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">{ t.description[0] }</span> { t.description[1] }{" "}
+        <span className="font-bold">{ t.description[2] }</span> { t.description[3] }{" "}
+        <span className="font-bold">{ t.description[4] }</span> { t.description[5] } <span className="italic">{ t.description[6] }</span>{ t.description[7] }{" "}
+        <span className="underline">{ t.description[8] }</span>.
       </motion.h1>
 
       <motion.div
@@ -85,7 +93,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          { t.contact }{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -94,7 +102,7 @@ export default function Intro() {
           href="/CV.pdf"
           download
         >
-          Download CV{" "}
+          { t.download }{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 

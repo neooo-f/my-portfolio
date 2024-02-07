@@ -1,3 +1,17 @@
 {
-    "key": "valianè"
+    "intro": {
+        "description": {
+            "part1": "Hello, I'm Ricardo.",
+            "part2": "I'm a ",
+            "part3": "full-stack developer",
+            "part4": "with",
+            "part5": "8 years",
+            "part6": "of experience. I enjoy building",
+            "part7": "sites & apps",
+            "part8": ". My focus is",
+            "part9": "React (Next.js)"
+        },
+        "contactMe": "",
+        "downloadCV": ""
+    }
 }

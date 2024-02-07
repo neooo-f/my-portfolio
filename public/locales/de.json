@@ -1,3 +1,35 @@
 {
-    "key": "wert"
+    "intro": {
+        "description": {
+            "part1": "Hallo, ich bin Neo.",
+            "part2": "Ich bin",
+            "part3": "full-stack developer",
+            "part4": "mit",
+            "part5": "3.5 Jahren",
+            "part6": "Erfahrung. Ich programmiere gerne",
+            "part7": "Webseiten & Apps",
+            "part8": ". Meinen Fokus lege ich auf",
+            "part9": "React (Next.js)"
+        },
+        "contactMe": "Kontaktiere mich hier",
+        "downloadCV": "Lebenslauf herunterladen"
+    },
+    "about": {
+        "heading": "Über mich",
+        "description": {
+            "part1": "Aktuell schliesse ich meine Lehre als",
+            "part2": "Informatiker ",
+            "part3": "ab. Letztens entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
+            "part4": "full-stack web development.",
+            "part5": "Am meisten Spass daran macht mir",
+            "part6": "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu erstellen. Ich",
+            "part7": "mag",
+            "part8": "das Gefühl, wenn man endlich eine Lösung für ein Problem hat, nachdem man lange daran herumstudiert hat. Meine haupt Technologien sind",
+            "part9": "React, Nest.js (Node.js) mit Prisma und MySQL",
+            "part10": ". Ich preferiere TypeScript um eine klare Typifizierung zu haben, so dass ich mich nicht mit unnötigen type errors herumschlagen muss. Ich lerne immer mal wieder gerne neue technologien",
+            "part11": "Wenn ich nicht programmiere",
+            "part12": ", Mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
+            "part13": "neue Dinge zu lernen."
+        }
+    }
 }

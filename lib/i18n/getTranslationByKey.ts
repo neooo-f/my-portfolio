@@ -50,6 +50,8 @@ type TranslationKeyValue = {
     if (!translationValue || typeof translationValue !== 'string') {
       return key;
     }
+
+    //TODO: expand functionality that it can return arrays
   
     // Return translation value.
     return translationValue;

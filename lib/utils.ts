@@ -1,3 +1,5 @@
+import { TranslationObejct } from "./i18n/loadTranslation";
+
 export const validateString = (
   value: unknown,
   maxLength: number
@@ -24,6 +26,18 @@ export const getErrorMessage = (error: unknown): string => {
 
   return message;
 };
+
+// temporary helper that returns all values of a translation object as string array. NOT TYPE SAFE!
+export const getTranslationObjectValuesAsArray = (t: TranslationObejct, translationKey: string, elementsCount: number): string[] => {
+  let arr: string[] = [];
+
+  // key naming always has to end with a number
+  for (let i = 1; i < (elementsCount + 1); i++) {
+    arr.push(t(`${translationKey}${i}` as any));
+  }
+
+  return arr;
+}
 
 // Helper type to get all of the keys in a nested type.
 export type ObjectKeys<
