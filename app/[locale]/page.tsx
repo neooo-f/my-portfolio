@@ -28,8 +28,14 @@ export default async function Home({ params }: Props) {
         heading: t('about.heading'),
         description: getTranslationObjectValuesAsArray(t, 'about.description.part', 13)
       }} />
-      <Projects />
-      <Skills />
+      <Projects t={{
+        heading: t('projects.heading'),
+        projects: getTranslationObjectValuesAsArray(t, 'projects.data.project', 2)
+      }} />
+      <Skills t={{
+        heading: t('skills.heading'),
+        skills: JSON.parse(t('skills.data'))
+      }} />
       <Experience />
       <Contact />
     </main>

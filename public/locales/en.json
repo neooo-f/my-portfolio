@@ -33,6 +33,14 @@
         }
     },
     "projects": {
-        
+        "heading": "My Projects",
+        "data": {
+            "project1": "{\"title\":\"Chat App\",\"description\":\"A messaging application for seamless communication\",\"tags\":[\"communication\",\"messaging\",\"app\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}",
+            "project2": "{\"title\":\"Chat App\",\"description\":\"A messaging application for seamless communication\",\"tags\":[\"communication\",\"messaging\",\"app\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}"
+        }
+    },
+    "skills": {
+        "heading": "My skills",
+        "data": "[\"HTML\",\"CSS\",\"JavaScript\",\"TypeScript\",\"React\",\"Next.js\",\"Node.js\",\"Git\",\"Tailwind\",\"Prisma\",\"MongoDB\",\"Redux\",\"GraphQL\",\"Apollo\",\"Express\",\"PostgreSQL\",\"Python\",\"Django\",\"Framer Motion\"]"
     }
 }

@@ -1,11 +1,17 @@
 "use client";
 
 import { useRef } from "react";
-import { projectsData } from "@/lib/data";
+// import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-type ProjectProps = (typeof projectsData)[number];
+//type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: string;
+}
 
 export default function Project({
   title,
@@ -50,6 +56,8 @@ export default function Project({
 
         <Image
           src={imageUrl}
+          width={800}
+          height={600}
           alt="Project I worked on"
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl

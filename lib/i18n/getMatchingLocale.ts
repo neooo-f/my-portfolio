@@ -1,7 +1,7 @@
-import { Locale, i18nConfig } from '@/i18n';
-import { match } from '@formatjs/intl-localematcher';
-import Negotiator from 'negotiator';
-import { NextRequest } from 'next/server';
+import { Locale, i18nConfig } from "@/i18n";
+import { match } from "@formatjs/intl-localematcher";
+import Negotiator from "negotiator";
+import { NextRequest } from "next/server";
 
 /**
  * Get best matching locale based on available client and app/server locales.

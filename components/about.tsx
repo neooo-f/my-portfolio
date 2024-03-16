@@ -9,8 +9,8 @@ type Props = {
   t: {
     heading: string;
     description: string[];
-  }
-}
+  };
+};
 
 export default function About({ t }: Props) {
   const { ref } = useSectionInView("About");
@@ -24,23 +24,22 @@ export default function About({ t }: Props) {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>{ t.heading }</SectionHeading>
+      <SectionHeading>{t.heading}</SectionHeading>
       <p className="mb-3">
-        { t.description[0] }{" "}
-        <span className="font-medium">{ t.description[1] }</span>{ t.description[2] }{" "}
-        <span className="font-medium">{ t.description[3] }</span>{" "}
-        <span className="italic">{ t.description[4] }</span> { t.description[5] }{" "}
-        <span className="underline">{ t.description[6] }</span>{" "}
-        { t.description[7] }{" "}
-        <span className="font-medium">
-          { t.description[8] }
-        </span>
-        { t.description[9] }
+        {t.description[0]}{" "}
+        <span className="font-medium">{t.description[1]}</span>
+        {t.description[2]}{" "}
+        <span className="font-medium">{t.description[3]}</span>{" "}
+        <span className="italic">{t.description[4]}</span> {t.description[5]}{" "}
+        <span className="underline">{t.description[6]}</span> {t.description[7]}{" "}
+        <span className="font-medium">{t.description[8]}</span>
+        {t.description[9]}
       </p>
 
       <p>
-        <span className="italic">{ t.description[10] }</span>{ t.description[11] }{" "}
-        <span className="font-medium">{ t.description[12] }</span>
+        <span className="italic">{t.description[10]}</span>
+        {t.description[11]}{" "}
+        <span className="font-medium">{t.description[12]}</span>
       </p>
     </motion.section>
   );
