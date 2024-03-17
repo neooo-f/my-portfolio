@@ -1,43 +1,79 @@
 {
-  "intro": {
-    "description": {
-      "part1": "Hello, I'm Neo.",
-      "part2": "I'm a",
-      "part3": "full-stack developer",
-      "part4": "with",
-      "part5": "3.5 years",
-      "part6": "of experience. I enjoy building",
-      "part7": "sites & apps",
-      "part8": ". My focus is",
-      "part9": "React (Next.js)"
+  "links": [
+    {
+      "name": "Home",
+      "hash": "#home"
     },
+    {
+      "name": "About",
+      "hash": "#about"
+    },
+    {
+      "name": "Projects",
+      "hash": "#projects"
+    },
+    {
+      "name": "Skills",
+      "hash": "#skills"
+    },
+    {
+      "name": "Experience",
+      "hash": "#experience"
+    },
+    {
+      "name": "Contact",
+      "hash": "#contact"
+    }
+  ],
+  "intro": {
+    "description": [
+      "Hello, I'm Neo.",
+      "I'm a",
+      "full-stack developer",
+      "with",
+      "3.5 years",
+      "of experience. I enjoy building",
+      "sites & apps",
+      ". My focus is",
+      "React (Next.js)"
+    ],
     "contactMe": "Contact me here",
     "downloadCV": "Download CV"
   },
   "about": {
     "heading": "About me",
-    "description": {
-      "part1": "At the moment i'm finishing my apprenticeship in",
-      "part2": "Computer science",
-      "part3": ". Recently I decided to expand my passion for programming. I started working on my own projects and learned",
-      "part4": "full-stack web development.",
-      "part5": "My favourite part of programming",
-      "part6": "is the possibility to be creative and create efficient solutions for daily problems. I",
-      "part7": "like",
-      "part8": "the feeling of finally figuring out a solution to a problem after thinking about it for a long time. My core stack is",
-      "part9": "React, Nest.js (Node.js) with Prisma and MySQL",
-      "part10": ". I prefer using TypeScript to be type safety so i don't have to deal with annoying type errors. I am always looking forward to learn new technologies.",
-      "part11": "When I'm not coding",
-      "part12": ", I enjoy doing sports in general, hanging out with my friends, and playing soccer. I also enjoy",
-      "part13": "learning new things."
-    }
+    "description": [
+      "At the moment i'm finishing my apprenticeship in",
+      "Computer science",
+      ". Recently I decided to expand my passion for programming. I started working on my own projects and learned",
+      "full-stack web development.",
+      "My favourite part of programming",
+      "is the possibility to be creative and create efficient solutions for daily problems. I",
+      "like",
+      "the feeling of finally figuring out a solution to a problem after thinking about it for a long time. My core stack is",
+      "React, Nest.js (Node.js) with Prisma and MySQL",
+      ". I prefer using TypeScript to be type safety so i don't have to deal with annoying type errors. I am always looking forward to learn new technologies.",
+      "When I'm not coding",
+      ", I enjoy doing sports in general, hanging out with my friends, and playing soccer. I also enjoy",
+      "learning new things."
+    ]
   },
   "projects": {
     "heading": "My Projects",
-    "data": {
-      "project1": "{\"title\":\"Chat App\",\"description\":\"A messaging application for seamless communication\",\"tags\":[\"communication\",\"messaging\",\"app\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}",
-      "project2": "{\"title\":\"Chat App\",\"description\":\"A messaging application for seamless communication\",\"tags\":[\"communication\",\"messaging\",\"app\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}"
-    }
+    "data": [
+      {
+        "title": "Chat App",
+        "description": "Messaging App with useless communication",
+        "tags": ["Typing", "Messaging", "App"],
+        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+      },
+      {
+        "title": "Chat App",
+        "description": "Messaging App with useless communication but just with longer text lmao",
+        "tags": ["Typign", "Messaging", "App", "Cock"],
+        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+      }
+    ]
   },
   "skills": {
     "heading": "My skills",
@@ -46,20 +82,18 @@
       "CSS",
       "JavaScript",
       "TypeScript",
-      "React",
+      "PHP",
+      "React.js",
+      "Vue.js",
       "Next.js",
       "Node.js",
+      "Nest.js",
       "Git",
       "Tailwind",
       "Prisma",
-      "MongoDB",
-      "Redux",
-      "GraphQL",
-      "Apollo",
+      "MySQL",
       "Express",
-      "PostgreSQL",
-      "Python",
-      "Django",
+      "Java",
       "Framer Motion"
     ]
   },
@@ -67,25 +101,18 @@
     "heading": "My Experience",
     "data": [
       {
-        "title": "Graduated bootcamp",
-        "location": "Miami, FL",
-        "description": "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+        "title": "School",
+        "location": "Oftringen, Switzerland",
+        "description": "I completed my compulsory schooling at the District School Oftringen.",
         "icon": "LuGraduationCap",
-        "date": "2019"
+        "date": "2017 - 2020"
       },
       {
-        "title": "Front-End Developer",
-        "location": "Orlando, FL",
-        "description": "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+        "title": "Apprenticeship",
+        "location": "Bern, Switzerland",
+        "description": "I completed my apprenticeship at Swisscom Schweiz AG as an IT specialist, specializing in application development.",
         "icon": "CgWorkAlt",
-        "date": "2019 - 2021"
-      },
-      {
-        "title": "Full-Stack Developer",
-        "location": "Houston, TX",
-        "description": "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        "icon": "FaReact",
-        "date": "2021 - present"
+        "date": "2020 - now"
       }
     ]
   },
@@ -93,7 +120,7 @@
     "heading": "Contact me",
     "descreption": [
       "Please contact me directly at",
-      "example@gmail.com",
+      "neo.fanetti@gmail.com",
       "or through this form."
     ],
     "placeholder": {
@@ -105,10 +132,10 @@
     "name": "Submit"
   },
   "footer": {
-    "title": "2030 Ricardo. All rights reserved.",
+    "title": "2030 Neo Fanetti. All rights reserved.",
     "descreption": [
       "About this website:",
-      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting."
+      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend"
     ]
   }
 }

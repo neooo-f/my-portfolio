@@ -1,26 +1,26 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import portrait from "@/public/portrait.png";
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
-import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import Image from 'next/image';
+import portrait from '@/public/images/portrait.png';
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
+import { HiDownload } from 'react-icons/hi';
+import { FaGithubSquare } from 'react-icons/fa';
+import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 type Props = {
   t: {
     description: string[];
     contact: string;
     download: string;
-  }
-}
+  };
+};
 
 export default function Intro({ t }: Props) {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { ref } = useSectionInView('Home', 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -35,7 +35,7 @@ export default function Intro({ t }: Props) {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
+              type: 'tween',
               duration: 0.2,
             }}
           >
@@ -55,7 +55,7 @@ export default function Intro({ t }: Props) {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
+              type: 'spring',
               stiffness: 125,
               delay: 0.1,
               duration: 0.7,
@@ -71,10 +71,12 @@ export default function Intro({ t }: Props) {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">{ t.description[0] }</span> { t.description[1] }{" "}
-        <span className="font-bold">{ t.description[2] }</span> { t.description[3] }{" "}
-        <span className="font-bold">{ t.description[4] }</span> { t.description[5] } <span className="italic">{ t.description[6] }</span>{ t.description[7] }{" "}
-        <span className="underline">{ t.description[8] }</span>.
+        <span className="font-bold">{t.description[0]}</span> {t.description[1]}{' '}
+        <span className="font-bold">{t.description[2]}</span> {t.description[3]}{' '}
+        <span className="font-bold">{t.description[4]}</span> {t.description[5]}{' '}
+        <span className="italic">{t.description[6]}</span>
+        {t.description[7]} <span className="underline">{t.description[8]}</span>
+        .
       </motion.h1>
 
       <motion.div
@@ -89,11 +91,11 @@ export default function Intro({ t }: Props) {
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
-            setActiveSection("Contact");
+            setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
           }}
         >
-          { t.contact }{" "}
+          {t.contact}{' '}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -102,7 +104,7 @@ export default function Intro({ t }: Props) {
           href="/CV.pdf"
           download
         >
-          { t.download }{" "}
+          {t.download}{' '}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 

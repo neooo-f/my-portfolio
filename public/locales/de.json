@@ -1,4 +1,30 @@
 {
+  "links": [
+    {
+      "name": "Start",
+      "hash": "#home"
+    },
+    {
+      "name": "Über",
+      "hash": "#about"
+    },
+    {
+      "name": "Projekte",
+      "hash": "#projects"
+    },
+    {
+      "name": "Fähigkeiten",
+      "hash": "#skills"
+    },
+    {
+      "name": "Werdegang",
+      "hash": "#experience"
+    },
+    {
+      "name": "Kontakt",
+      "hash": "#contact"
+    }
+  ],
   "intro": {
     "description": [
       "Hallo, ich bin Neo.",
@@ -36,16 +62,28 @@
     "heading": "Meine Projekte",
     "data": [
       {
-        "title": "Chat App",
-        "description": "Eine Nachrichten Applikation für sinnlose Kommunikation",
-        "tags": ["Kommunikation", "Schreiben", "App"],
-        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+        "title": "Nespresso Kaffeeverwaltung",
+        "description": "Eine Fullstack Applikation um elektronisch den Zugriff auf seine Kaffeemaschine zu verwalten.",
+        "tags": ["Vue", "PHP", "Frontend", "Backend"],
+        "imageUrl": "/Nespresso.png"
+      },
+      {
+        "title": "The Movie Database",
+        "description": "Eine Frontend Applikation um eine Übersicht auf aktuelle Filme zu erhalten.",
+        "tags": ["Vue", "API", "Frontend"],
+        "imageUrl": "/Nespresso.png"
       },
       {
         "title": "Chat App",
         "description": "Eine Nachrichten Applikation für sinnlose Kommunikation du dreckige wexxer jetzt fuck mich ned ab süsch gets hert ufs maul",
         "tags": ["Kommunikation", "Schreiben", "App", "Schwanz"],
-        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+        "imageUrl": "/Nespresso.png"
+      },
+      {
+        "title": "Movie Tool",
+        "description": "",
+        "tags": ["", "", ""],
+        "imageUrl": "/Nespresso.png"
       }
     ]
   },
@@ -56,46 +94,37 @@
       "CSS",
       "JavaScript",
       "TypeScript",
-      "React",
+      "PHP",
+      "React.js",
+      "Vue.js",
       "Next.js",
       "Node.js",
+      "Nest.js",
       "Git",
       "Tailwind",
       "Prisma",
-      "MongoDB",
-      "Redux",
-      "GraphQL",
-      "Apollo",
+      "MySQL",
       "Express",
-      "PostgreSQL",
-      "Python",
-      "Django",
+      "Java",
       "Framer Motion"
     ]
   },
   "experience": {
-    "heading": "Meine Erfahrung",
+    "heading": "Beruflicher Werdegang",
     "data": [
       {
-        "title": "Graduated bootcamp",
-        "location": "Miami, FL",
-        "description": "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+        "title": "Schule",
+        "location": "Oftringen, Schweiz",
+        "description": "Ich schloss meine obligatorische Schulzeit an der Bezirksschule Oftringen ab.",
         "icon": "LuGraduationCap",
-        "date": "2019"
+        "date": "2017 - 2020"
       },
       {
-        "title": "Front-End Developer",
-        "location": "Orlando, FL",
-        "description": "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+        "title": "Ausbildung",
+        "location": "Bern, Schweiz",
+        "description": "Ich absolvierte meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler",
         "icon": "CgWorkAlt",
-        "date": "2019 - 2021"
-      },
-      {
-        "title": "Full-Stack Developer",
-        "location": "Houston, TX",
-        "description": "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        "icon": "FaReact",
-        "date": "2021 - present"
+        "date": "2020 - Heute"
       }
     ]
   },
@@ -103,7 +132,7 @@
     "heading": "Kontaktiere mich",
     "descreption": [
       "Bitte kontaktiere mich direkt unter",
-      "example@gmail.com",
+      "neo.fanetti@gmail.com",
       "oder über dieses Formular."
     ],
     "placeholder": {
@@ -118,7 +147,7 @@
     "title": "2030 Neo Fanetti. Alle Rechte vorbehalten",
     "descreption": [
       "Über diese Webseite:",
-      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting."
+      "Erstellt mit React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend."
     ]
   }
 }
