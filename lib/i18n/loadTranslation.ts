@@ -1,30 +1,25 @@
-import { Locale, i18nConfig } from '@/i18n';
-import { ObjectKeys } from '@/lib/utils';
+import { Locale } from '@/i18n';
 
-// Contains functions to import translation .json files asynchrounously for specified locales.
-const translations = {
-    de: () => import('@/public/locales/de.json').then((module) => module.default),
-    en: () => import('@/public/locales/en.json').then((module) => module.default),
-    fr: () => import('@/public/locales/fr.json').then((module) => module.default),
-    it: () => import('@/public/locales/it.json').then((module) => module.default),
+type TranslationValue = string | string[] | TranslationObject;
+interface TranslationObject {
+  [key: string]: TranslationValue;
+}
+
+const translations: Record<Locale, () => Promise<TranslationObject>> = {
+  de: () => import('@/public/locales/de.json').then((module) => module.default),
+  en: () => import('@/public/locales/en.json').then((module) => module.default),
+  fr: () => import('@/public/locales/fr.json').then((module) => module.default),
+  it: () => import('@/public/locales/it.json').then((module) => module.default),
 };
 
-// Define a generated type for translation object.
-export type Translation = Awaited<
-  ReturnType<(typeof translations)[typeof i18nConfig.defaultLocale]>
->;
+export type Translation = TranslationObject;
 
-// Define a generated type for all nested keys found in Translation type.
-export type TranslationObejct = (key: ObjectKeys<Translation>) => string;
+export type TranslationObjectType = (
+  key: string | string[]
+) => string | string[];
 
-/**
- * Loads a translation .json file asynchronously based on a given locale.
- * @param locale Locale string
- * @returns Translation object with translation key-value pairs.
- */
 export default async function loadTranslation(
   locale: Locale
 ): Promise<Translation> {
-  // Invoke a call to translations corresponding to a given locale key.
   return translations[locale]();
 }

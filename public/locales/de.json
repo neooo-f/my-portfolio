@@ -1,46 +1,124 @@
 {
-    "intro": {
-        "description": {
-            "part1": "Hallo, ich bin Neo.",
-            "part2": "Ich bin",
-            "part3": "full-stack developer",
-            "part4": "mit",
-            "part5": "3.5 Jahren",
-            "part6": "Erfahrung. Ich programmiere gerne",
-            "part7": "Webseiten & Apps",
-            "part8": ". Meinen Fokus lege ich auf",
-            "part9": "React (Next.js)"
-        },
-        "contactMe": "Kontaktiere mich hier",
-        "downloadCV": "Lebenslauf herunterladen"
-    },
-    "about": {
-        "heading": "Über mich",
-        "description": {
-            "part1": "Aktuell schliesse ich meine Lehre als",
-            "part2": "Informatiker ",
-            "part3": "ab. Letztens entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
-            "part4": "full-stack web development.",
-            "part5": "Am meisten Spass daran macht mir",
-            "part6": "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu erstellen. Ich",
-            "part7": "mag",
-            "part8": "das Gefühl, wenn man endlich eine Lösung für ein Problem hat, nachdem man lange daran herumstudiert hat. Meine haupt Technologien sind",
-            "part9": "React, Nest.js (Node.js) mit Prisma und MySQL",
-            "part10": ". Ich preferiere TypeScript um eine klare Typifizierung zu haben, so dass ich mich nicht mit unnötigen type errors herumschlagen muss. Ich lerne immer mal wieder gerne neue technologien",
-            "part11": "Wenn ich nicht programmiere",
-            "part12": ", Mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
-            "part13": "neue Dinge zu lernen."
-        }
-    },
-    "projects": {
-        "heading": "Meine Projekte",
-        "data": {
-            "project1": "{\"title\":\"Chat App\",\"description\":\"Eine Nachrichten Applikation für sinnlose Kommunikation\",\"tags\":[\"Kommunikation\",\"Schreiben\",\"App\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}",
-            "project2": "{\"title\":\"Chat App\",\"description\":\"Eine Nachrichten Applikation für sinnlose Kommunikation\",\"tags\":[\"Kommunikation\",\"Schreiben\",\"App\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}"
-        }
-    },
-    "skills": {
-        "heading": "Meine Fähigkeiten",
-        "data": "[\"HTML\",\"CSS\",\"JavaScript\",\"TypeScript\",\"React\",\"Next.js\",\"Node.js\",\"Git\",\"Tailwind\",\"Prisma\",\"MongoDB\",\"Redux\",\"GraphQL\",\"Apollo\",\"Express\",\"PostgreSQL\",\"Python\",\"Django\",\"Framer Motion\"]"
+  "intro": {
+    "description": [
+      "Hallo, ich bin Neo.",
+      "Ich bin",
+      "full-stack developer",
+      "mit",
+      "3.5 Jahren",
+      "Erfahrung. Ich programmiere gerne",
+      "Webseiten & Apps",
+      ". Meinen Fokus lege ich auf",
+      "React (Next.js)"
+    ],
+    "contactMe": "Kontaktiere mich hier",
+    "downloadCV": "Lebenslauf herunterladen"
+  },
+  "about": {
+    "heading": "Über mich",
+    "description": [
+      "Aktuell schliesse ich meine Lehre als",
+      "Informatiker ",
+      "ab. Letztens entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
+      "full-stack web development.",
+      "Am meisten Spass daran macht mir",
+      "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu erstellen. Ich",
+      "mag",
+      "das Gefühl, wenn man endlich eine Lösung für ein Problem hat, nachdem man lange daran herumstudiert hat. Meine haupt Technologien sind",
+      "React, Nest.js (Node.js) mit Prisma und MySQL",
+      ". Ich preferiere TypeScript um eine klare Typifizierung zu haben, so dass ich mich nicht mit unnötigen type errors herumschlagen muss. Ich lerne immer mal wieder gerne neue technologien",
+      "Wenn ich nicht programmiere",
+      ", Mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
+      "neue Dinge zu lernen."
+    ]
+  },
+  "projects": {
+    "heading": "Meine Projekte",
+    "data": [
+      {
+        "title": "Chat App",
+        "description": "Eine Nachrichten Applikation für sinnlose Kommunikation",
+        "tags": ["Kommunikation", "Schreiben", "App"],
+        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+      },
+      {
+        "title": "Chat App",
+        "description": "Eine Nachrichten Applikation für sinnlose Kommunikation du dreckige wexxer jetzt fuck mich ned ab süsch gets hert ufs maul",
+        "tags": ["Kommunikation", "Schreiben", "App", "Schwanz"],
+        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Meine Fähigkeiten",
+    "data": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Git",
+      "Tailwind",
+      "Prisma",
+      "MongoDB",
+      "Redux",
+      "GraphQL",
+      "Apollo",
+      "Express",
+      "PostgreSQL",
+      "Python",
+      "Django",
+      "Framer Motion"
+    ]
+  },
+  "experience": {
+    "heading": "Meine Erfahrung",
+    "data": [
+      {
+        "title": "Graduated bootcamp",
+        "location": "Miami, FL",
+        "description": "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+        "icon": "LuGraduationCap",
+        "date": "2019"
+      },
+      {
+        "title": "Front-End Developer",
+        "location": "Orlando, FL",
+        "description": "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+        "icon": "CgWorkAlt",
+        "date": "2019 - 2021"
+      },
+      {
+        "title": "Full-Stack Developer",
+        "location": "Houston, TX",
+        "description": "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+        "icon": "FaReact",
+        "date": "2021 - present"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Kontaktiere mich",
+    "descreption": [
+      "Bitte kontaktiere mich direkt unter",
+      "example@gmail.com",
+      "oder über dieses Formular."
+    ],
+    "placeholder": {
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht"
     }
+  },
+  "submitButton": {
+    "name": "Abschicken"
+  },
+  "footer": {
+    "title": "2030 Neo Fanetti. Alle Rechte vorbehalten",
+    "descreption": [
+      "Über diese Webseite:",
+      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting."
+    ]
+  }
 }

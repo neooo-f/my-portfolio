@@ -1,19 +1,19 @@
-import Header from "@/components/header";
-import '../globals.css'
-import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
-import ThemeContextProvider from "@/context/theme-context";
-import { Toaster } from "react-hot-toast";
-import { Locale, i18nConfig } from "@/i18n";
-import getTranslation from "@/lib/i18n/getTranslation";
+import Header from '@/components/header';
+import '../globals.css';
+import { Inter } from 'next/font/google';
+import ActiveSectionContextProvider from '@/context/active-section-context';
+import Footer from '@/components/footer';
+import ThemeSwitch from '@/components/theme-switch';
+import ThemeContextProvider from '@/context/theme-context';
+import { Toaster } from 'react-hot-toast';
+import { Locale, i18nConfig } from '@/i18n';
+import getTranslation from '@/lib/i18n/getTranslation';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Ricardo | Personal Portfolio",
-  description: "Ricardo is a full-stack developer with 8 years of experience.",
+  title: 'Ricardo | Personal Portfolio',
+  description: 'Ricardo is a full-stack developer with 8 years of experience.',
 };
 
 export async function generateStaticParams() {
@@ -28,7 +28,7 @@ type Props = {
 };
 
 export default async function RootLayout({ children, params }: Props) {
-  const t = await getTranslation(params.locale)
+  const t = await getTranslation(params.locale);
 
   return (
     <html lang={params.locale} className="!scroll-smooth">
@@ -41,7 +41,12 @@ export default async function RootLayout({ children, params }: Props) {
           <ActiveSectionContextProvider>
             <Header />
             {children}
-            <Footer />
+            <Footer
+              t={{
+                title: t('footer.title') as string,
+                descreption: t('footer.descreption') as string[],
+              }}
+            />
 
             <Toaster position="top-right" />
             <ThemeSwitch />

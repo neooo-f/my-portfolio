@@ -1,6 +1,8 @@
 import { Locale } from '@/i18n';
 import getTranslationByKey from '@/lib/i18n/getTranslationByKey';
-import loadTranslation, { TranslationObejct } from '@/lib/i18n/loadTranslation';
+import loadTranslation, {
+  TranslationObjectType,
+} from '@/lib/i18n/loadTranslation';
 import 'server-only';
 
 /**
@@ -10,10 +12,10 @@ import 'server-only';
  */
 export default async function getTranslation(
   locale: Locale
-): Promise<TranslationObejct> {
+): Promise<TranslationObjectType> {
   // Load translation content from a file based on locale.
   const translation = await loadTranslation(locale);
 
   // Return translation data.
-  return (key: string) => getTranslationByKey(key, translation);
+  return (key: string | string[]) => getTranslationByKey(key, translation);
 }
