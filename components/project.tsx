@@ -1,23 +1,22 @@
 'use client';
 
 import { useRef } from 'react';
-// import { projectsData } from "@/lib/data";
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import nespresso from '@/public/images/nespresso.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-//type ProjectProps = (typeof projectsData)[number];
 type ProjectProps = {
   title: string;
   description: string;
   tags: string[];
-  imageUrl: string;
+  imageName: string;
 };
 
 export default function Project({
   title,
   description,
   tags,
-  imageUrl,
+  imageName,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -26,6 +25,10 @@ export default function Project({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  const imageMapping = new Map<string, StaticImageData>([
+    ['nespresso', nespresso],
+  ]);
 
   return (
     <motion.div
@@ -53,9 +56,8 @@ export default function Project({
             ))}
           </ul>
         </div>
-
         <Image
-          src={imageUrl}
+          src={imageMapping.get(imageName) as StaticImageData}
           width={800}
           height={600}
           alt="Project I worked on"

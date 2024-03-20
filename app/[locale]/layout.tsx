@@ -13,8 +13,8 @@ import LanguageSwitch from '@/components/language-switch';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Ricardo | Personal Portfolio',
-  description: 'Ricardo is a full-stack developer with 8 years of experience.',
+  title: 'Neo Fanetti',
+  description: 'developer portfolio',
 };
 
 export async function generateStaticParams() {

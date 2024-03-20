@@ -65,25 +65,25 @@
         "title": "Nespresso Kaffeeverwaltung",
         "description": "Eine Fullstack Applikation um elektronisch den Zugriff auf seine Kaffeemaschine zu verwalten.",
         "tags": ["Vue", "PHP", "Frontend", "Backend"],
-        "imageUrl": "/Nespresso.png"
+        "imageName": "nespresso"
       },
       {
         "title": "The Movie Database",
         "description": "Eine Frontend Applikation um eine Übersicht auf aktuelle Filme zu erhalten.",
         "tags": ["Vue", "API", "Frontend"],
-        "imageUrl": "/Nespresso.png"
+        "imageName": "nespresso"
       },
       {
         "title": "Chat App",
         "description": "Eine Nachrichten Applikation für sinnlose Kommunikation du dreckige wexxer jetzt fuck mich ned ab süsch gets hert ufs maul",
         "tags": ["Kommunikation", "Schreiben", "App", "Schwanz"],
-        "imageUrl": "/Nespresso.png"
+        "imageName": "nespresso"
       },
       {
         "title": "Movie Tool",
         "description": "",
         "tags": ["", "", ""],
-        "imageUrl": "/Nespresso.png"
+        "imageName": "nespresso"
       }
     ]
   },

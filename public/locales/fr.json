@@ -1,53 +1,141 @@
 {
-  "intro": {
-    "description": {
-      "part1": "Hello, I'm Neo.",
-      "part2": "I'm a",
-      "part3": "full-stack developer",
-      "part4": "with",
-      "part5": "3.5 years",
-      "part6": "of experience. I enjoy building",
-      "part7": "sites & apps",
-      "part8": ". My focus is",
-      "part9": "React (Next.js)"
+  "links": [
+    {
+      "name": "Home",
+      "hash": "#home"
     },
+    {
+      "name": "About",
+      "hash": "#about"
+    },
+    {
+      "name": "Projects",
+      "hash": "#projects"
+    },
+    {
+      "name": "Skills",
+      "hash": "#skills"
+    },
+    {
+      "name": "Experience",
+      "hash": "#experience"
+    },
+    {
+      "name": "Contact",
+      "hash": "#contact"
+    }
+  ],
+  "intro": {
+    "description": [
+      "Hello, I'm Neo.",
+      "I'm a",
+      "full-stack developer",
+      "with",
+      "3.5 years",
+      "of experience. I enjoy building",
+      "sites & apps",
+      ". My focus is",
+      "React (Next.js)"
+    ],
     "contactMe": "Contact me here",
     "downloadCV": "Download CV"
   },
   "about": {
     "heading": "About me",
-    "description": {
-      "part1": "At the moment i'm finishing my apprenticeship in",
-      "part2": "Computer science",
-      "part3": ". Recently I decided to expand my passion for programming. I started working on my own projects and learned",
-      "part4": "full-stack web development.",
-      "part5": "My favourite part of programming",
-      "part6": "is the possibility to be creative and create efficient solutions for daily problems. I",
-      "part7": "like",
-      "part8": "the feeling of finally figuring out a solution to a problem after thinking about it for a long time. My core stack is",
-      "part9": "React, Nest.js (Node.js) with Prisma and MySQL",
-      "part10": ". I prefer using TypeScript to be type safety so i don't have to deal with annoying type errors. I am always looking forward to learn new technologies.",
-      "part11": "When I'm not coding",
-      "part12": ", I enjoy doing sports in general, hanging out with my friends, and playing soccer. I also enjoy",
-      "part13": "learning new things."
-    }
+    "description": [
+      "At the moment i'm finishing my apprenticeship in",
+      "Computer science",
+      ". Recently I decided to expand my passion for programming. I started working on my own projects and learned",
+      "full-stack web development.",
+      "My favourite part of programming",
+      "is the possibility to be creative and create efficient solutions for daily problems. I",
+      "like",
+      "the feeling of finally figuring out a solution to a problem after thinking about it for a long time. My core stack is",
+      "React, Nest.js (Node.js) with Prisma and MySQL",
+      ". I prefer using TypeScript to be type safety so i don't have to deal with annoying type errors. I am always looking forward to learn new technologies.",
+      "When I'm not coding",
+      ", I enjoy doing sports in general, hanging out with my friends, and playing soccer. I also enjoy",
+      "learning new things."
+    ]
   },
   "projects": {
     "heading": "My Projects",
-    "data": {
-      "project1": "{\"title\":\"Chat App\",\"description\":\"A messaging application for seamless communication\",\"tags\":[\"communication\",\"messaging\",\"app\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}",
-      "project2": "{\"title\":\"Chat App\",\"description\":\"A messaging application for seamless communication\",\"tags\":[\"communication\",\"messaging\",\"app\"],\"imageUrl\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100\"}"
-    }
+    "data": [
+      {
+        "title": "Chat App",
+        "description": "Messaging App with useless communication",
+        "tags": ["Typing", "Messaging", "App"],
+        "imageName": "nespresso"
+      },
+      {
+        "title": "Chat App",
+        "description": "Messaging App with useless communication but just with longer text lmao",
+        "tags": ["Typign", "Messaging", "App", "Cock"],
+        "imageName": "nespresso"
+      }
+    ]
   },
   "skills": {
     "heading": "My skills",
-    "data": "[\"HTML\",\"CSS\",\"JavaScript\",\"TypeScript\",\"React\",\"Next.js\",\"Node.js\",\"Git\",\"Tailwind\",\"Prisma\",\"MongoDB\",\"Redux\",\"GraphQL\",\"Apollo\",\"Express\",\"PostgreSQL\",\"Python\",\"Django\",\"Framer Motion\"]"
+    "data": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "React.js",
+      "Vue.js",
+      "Next.js",
+      "Node.js",
+      "Nest.js",
+      "Git",
+      "Tailwind",
+      "Prisma",
+      "MySQL",
+      "Express",
+      "Java",
+      "Framer Motion"
+    ]
   },
-  "test": {
-    "testarr": [
-      "jaja",
-      "savesave",
-      { "name": "neo", "age": 15, "musictaste": ["regee", "regee"] }
+  "experience": {
+    "heading": "My Experience",
+    "data": [
+      {
+        "title": "School",
+        "location": "Oftringen, Switzerland",
+        "description": "I completed my compulsory schooling at the District School Oftringen.",
+        "icon": "LuGraduationCap",
+        "date": "2017 - 2020"
+      },
+      {
+        "title": "Apprenticeship",
+        "location": "Bern, Switzerland",
+        "description": "I completed my apprenticeship at Swisscom Schweiz AG as an IT specialist, specializing in application development.",
+        "icon": "CgWorkAlt",
+        "date": "2020 - now"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact me",
+    "descreption": [
+      "Please contact me directly at",
+      "neo.fanetti@gmail.com",
+      "or through this form."
+    ],
+    "placeholder": {
+      "email": "Your email",
+      "message": "Your message"
+    }
+  },
+  "submitButton": {
+    "name": "Submit"
+  },
+  "footer": {
+    "title": "2030 Neo Fanetti. All rights reserved.",
+    "descreption": [
+      "About this website:",
+      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend"
     ]
   }
 }

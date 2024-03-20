@@ -5,7 +5,7 @@ interface TranslationObject {
   [key: string]: TranslationValue;
 }
 
-const translations: Record<Locale, () => Promise<TranslationObject>> = {
+const translations: Record<Locale, () => Promise</*TranslationObject*/ any>> = {
   de: () => import('@/public/locales/de.json').then((module) => module.default),
   en: () => import('@/public/locales/en.json').then((module) => module.default),
   fr: () => import('@/public/locales/fr.json').then((module) => module.default),
