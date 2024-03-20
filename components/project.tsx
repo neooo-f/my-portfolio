@@ -2,8 +2,13 @@
 
 import { useRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import nespresso from '@/public/images/nespresso.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
+
+// images
+import contacts from '@/public/images/contacts.png';
+import ictskills from '@/public/images/ictskills.png';
+import moviedb from '@/public/images/moviedb.png';
+import nespresso from '@/public/images/nespresso.png';
 
 type ProjectProps = {
   title: string;
@@ -28,6 +33,9 @@ export default function Project({
 
   const imageMapping = new Map<string, StaticImageData>([
     ['nespresso', nespresso],
+    ['contacts', contacts],
+    ['ictskills', ictskills],
+    ['moviedb', moviedb],
   ]);
 
   return (

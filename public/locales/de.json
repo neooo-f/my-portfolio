@@ -29,10 +29,10 @@
     "description": [
       "Hallo, ich bin Neo.",
       "Ich bin",
-      "full-stack developer",
+      "Full-Stack-Entwickler",
       "mit",
-      "3.5 Jahren",
-      "Erfahrung. Ich programmiere gerne",
+      "3 Jahren",
+      "Berufserfahrung. Ich programmiere gerne",
       "Webseiten & Apps",
       ". Meinen Fokus lege ich auf",
       "React (Next.js)"
@@ -48,14 +48,14 @@
       "ab. Letztens entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
       "full-stack web development.",
       "Am meisten Spass daran macht mir",
-      "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu erstellen. Ich",
+      "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu finden. Ich",
       "mag",
-      "das Gefühl, wenn man endlich eine Lösung für ein Problem hat, nachdem man lange daran herumstudiert hat. Meine haupt Technologien sind",
+      "das Gefühl, wenn man endlich eine Lösung für ein Problem hat, nachdem man lange daran herumstudiert hat. Meine bevorzugten Technologien sind",
       "React, Nest.js (Node.js) mit Prisma und MySQL",
-      ". Ich preferiere TypeScript um eine klare Typifizierung zu haben, so dass ich mich nicht mit unnötigen type errors herumschlagen muss. Ich lerne immer mal wieder gerne neue technologien",
+      ". Ich präferiere TypeScript um eine klare Typifizierung zu haben, so dass ich mich nicht mit unnötigen type-errors herumschlagen muss. Zusätzlich eigne ich mir gerne neues Wissen an.",
       "Wenn ich nicht programmiere",
-      ", Mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
-      "neue Dinge zu lernen."
+      ", mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
+      "neue Erfahrungen zu sammeln."
     ]
   },
   "projects": {
@@ -71,19 +71,19 @@
         "title": "The Movie Database",
         "description": "Eine Frontend Applikation um eine Übersicht auf aktuelle Filme zu erhalten.",
         "tags": ["Vue", "API", "Frontend"],
-        "imageName": "nespresso"
+        "imageName": "moviedb"
       },
       {
-        "title": "Chat App",
-        "description": "Eine Nachrichten Applikation für sinnlose Kommunikation du dreckige wexxer jetzt fuck mich ned ab süsch gets hert ufs maul",
-        "tags": ["Kommunikation", "Schreiben", "App", "Schwanz"],
-        "imageName": "nespresso"
+        "title": "ICT-Skills Evaluation Tool",
+        "description": "Eine Desktop Applikation mit welcher man einen Wettbewerb tracken und Teilnehmer evaluieren kann.",
+        "tags": ["Java", "JavaFX", "Threads"],
+        "imageName": "ictskills"
       },
       {
-        "title": "Movie Tool",
-        "description": "",
-        "tags": ["", "", ""],
-        "imageName": "nespresso"
+        "title": "Kontakverwaltung",
+        "description": "Eine Frontend Applikation um seine Kontake abzuspeichern und anschliessend zu verwalten",
+        "tags": ["Vue", "Frontend", "Formular"],
+        "imageName": "contacts"
       }
     ]
   },

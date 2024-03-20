@@ -29,9 +29,9 @@
     "description": [
       "Hello, I'm Neo.",
       "I'm a",
-      "full-stack developer",
+      "full stack developer",
       "with",
-      "3.5 years",
+      "3 years",
       "of experience. I enjoy building",
       "sites & apps",
       ". My focus is",
@@ -62,16 +62,28 @@
     "heading": "My Projects",
     "data": [
       {
-        "title": "Chat App",
-        "description": "Messaging App with useless communication",
-        "tags": ["Typing", "Messaging", "App"],
+        "title": "Nespresso Coffee Management",
+        "description": "A fullstack application wich is used to manage access of your coffee machine.",
+        "tags": ["Vue", "PHP", "Frontend", "Backend"],
         "imageName": "nespresso"
       },
       {
-        "title": "Chat App",
-        "description": "Messaging App with useless communication but just with longer text lmao",
-        "tags": ["Typign", "Messaging", "App", "Cock"],
-        "imageName": "nespresso"
+        "title": "The Movie Database",
+        "description": "A frontend application which gives you an overview of current movies.",
+        "tags": ["Vue", "API", "Frontend"],
+        "imageName": "moviedb"
+      },
+      {
+        "title": "ICT-Skills Evaluation Tool",
+        "description": "A desktop application which lets you track a competition and evaluate participants.",
+        "tags": ["Java", "JavaFX", "Threads"],
+        "imageName": "ictskills"
+      },
+      {
+        "title": "Kontakverwaltung",
+        "description": "A frontend application which lets you save and manage your contacts.",
+        "tags": ["Vue", "Frontend", "Form"],
+        "imageName": "contacts"
       }
     ]
   },
