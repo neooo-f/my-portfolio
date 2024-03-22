@@ -4,6 +4,7 @@ import React from 'react';
 import SectionHeading from './section-heading';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
+import { link } from '@/context/active-section-context';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -21,13 +22,14 @@ const fadeInAnimationVariants = {
 
 type Props = {
   t: {
+    links: link[];
     heading: string;
     skills: string[];
   };
 };
 
 export default function Skills({ t }: Props) {
-  const { ref } = useSectionInView('Skills');
+  const { ref } = useSectionInView(t.links[3].name);
 
   return (
     <section

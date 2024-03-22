@@ -9,10 +9,14 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import {
+  link,
+  useActiveSectionContext,
+} from '@/context/active-section-context';
 
 type Props = {
   t: {
+    links: link[];
     description: string[];
     contact: string;
     download: string;
@@ -20,7 +24,7 @@ type Props = {
 };
 
 export default function Intro({ t }: Props) {
-  const { ref } = useSectionInView('Home', 0.5);
+  const { ref } = useSectionInView(t.links[0].name, 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -91,7 +95,8 @@ export default function Intro({ t }: Props) {
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
-            setActiveSection('Contact');
+            // setActiveSection('Contact');
+            setActiveSection(t.links[t.links.length - 1].name);
             setTimeOfLastClick(Date.now());
           }}
         >

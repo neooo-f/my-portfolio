@@ -15,16 +15,18 @@ import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 import { IconType } from 'react-icons';
+import { link } from '@/context/active-section-context';
 
 type Props = {
   t: {
+    links: link[];
     heading: string;
     experiences: any[];
   };
 };
 
 export default function Experience({ t }: Props) {
-  const { ref } = useSectionInView('Experience');
+  const { ref } = useSectionInView(t.links[4].name);
   const { theme } = useTheme();
 
   const iconMapping = new Map<string, IconType>([

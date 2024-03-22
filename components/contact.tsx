@@ -7,9 +7,11 @@ import { useSectionInView } from '@/lib/hooks';
 import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './submit-btn';
 import toast from 'react-hot-toast';
+import { link } from '@/context/active-section-context';
 
 type Props = {
   t: {
+    links: link[];
     heading: string;
     description: string[];
     emailPlaceholder: string;
@@ -21,7 +23,7 @@ type Props = {
 };
 
 export default function Contact({ t }: Props) {
-  const { ref } = useSectionInView('Contact');
+  const { ref } = useSectionInView(t.links[t.links.length - 1].name);
 
   return (
     <motion.section

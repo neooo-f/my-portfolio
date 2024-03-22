@@ -1,19 +1,21 @@
-"use client";
+'use client';
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
+import React from 'react';
+import SectionHeading from './section-heading';
+import { motion } from 'framer-motion';
+import { useSectionInView } from '@/lib/hooks';
+import { link } from '@/context/active-section-context';
 
 type Props = {
   t: {
+    links: link[];
     heading: string;
     description: string[];
   };
 };
 
 export default function About({ t }: Props) {
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView(t.links[1].name);
 
   return (
     <motion.section
@@ -26,19 +28,19 @@ export default function About({ t }: Props) {
     >
       <SectionHeading>{t.heading}</SectionHeading>
       <p className="mb-3">
-        {t.description[0]}{" "}
+        {t.description[0]}{' '}
         <span className="font-medium">{t.description[1]}</span>
-        {t.description[2]}{" "}
-        <span className="font-medium">{t.description[3]}</span>{" "}
-        <span className="italic">{t.description[4]}</span> {t.description[5]}{" "}
-        <span className="underline">{t.description[6]}</span> {t.description[7]}{" "}
+        {t.description[2]}{' '}
+        <span className="font-medium">{t.description[3]}</span>{' '}
+        <span className="italic">{t.description[4]}</span> {t.description[5]}{' '}
+        <span className="underline">{t.description[6]}</span> {t.description[7]}{' '}
         <span className="font-medium">{t.description[8]}</span>
         {t.description[9]}
       </p>
 
       <p>
         <span className="italic">{t.description[10]}</span>
-        {t.description[11]}{" "}
+        {t.description[11]}{' '}
         <span className="font-medium">{t.description[12]}</span>
       </p>
     </motion.section>
