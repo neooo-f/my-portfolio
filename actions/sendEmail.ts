@@ -1,16 +1,29 @@
 'use server';
 
-import React from 'react';
-import { Resend } from 'resend';
+import { createTransport } from 'nodemailer';
 import { validateString, getErrorMessage } from '@/lib/utils';
-import ContactFormEmail from '@/email/contact-form-email';
+import { emailResponse } from '@/email/contact-form-email';
 
-// https://resend.com/pricing
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const sendEmail = async (formData: {
+  message: string;
+  senderMail: string;
+}) => {
+  // formData: FormData
 
-export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get('senderEmail');
-  const message = formData.get('message');
+  // const senderEmail = formData.get('senderEmail');
+  // const message = formData.get('message');
+  const senderEmail = formData.senderMail;
+  const message = formData.message;
+
+  const transporter = createTransport({
+    host: 'smtp.gmail.com', // Ihr SMTP-Host
+    port: 587, // Ihr SMTP-Port
+    secure: false, // true für SSL, false für TLS
+    auth: {
+      user: 'neo.fanetti@gmail.com', // Ihre E-Mail-Adresse
+      pass: process.env.EMAIL_PASSWORD, // Ihr E-Mail-Passwort
+    },
+  });
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
@@ -27,15 +40,12 @@ export const sendEmail = async (formData: FormData) => {
   console.log(sendEmail, message);
   let data;
   try {
-    data = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
-      to: 'bytegrad@gmail.com',
-      subject: 'Message from contact form',
-      reply_to: senderEmail,
-      react: React.createElement(ContactFormEmail, {
-        message: message,
-        senderEmail: senderEmail,
-      }),
+    data = await transporter.sendMail({
+      from: 'neo.fanetti@gmail.com',
+      to: 'neo.fanetti@gmail.com',
+      subject: 'Message from contact form', // Betreff
+      html: emailResponse(message, senderEmail),
+      // text: 'Dies ist eine Test-E-Mail von Nodemailer mit TLS.', // Inhalt
     });
   } catch (error: unknown) {
     return {

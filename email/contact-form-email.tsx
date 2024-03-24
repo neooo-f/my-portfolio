@@ -1,4 +1,7 @@
-import React from "react";
+'use client';
+
+import { renderToStaticMarkup } from 'react-dom/server';
+import React from 'react';
 import {
   Html,
   Body,
@@ -9,18 +12,18 @@ import {
   Preview,
   Section,
   Text,
-} from "@react-email/components";
-import { Tailwind } from "@react-email/tailwind";
+} from '@react-email/components';
+import { Tailwind } from '@react-email/tailwind';
 
 type ContactFormEmailProps = {
   message: string;
   senderEmail: string;
 };
 
-export default function ContactFormEmail({
+const ContactFormEmail: React.FC<ContactFormEmailProps> = ({
   message,
   senderEmail,
-}: ContactFormEmailProps) {
+}) => {
   return (
     <Html>
       <Head />
@@ -41,4 +44,9 @@ export default function ContactFormEmail({
       </Tailwind>
     </Html>
   );
-}
+};
+
+export const emailResponse = (message: string, senderEmail: string) =>
+  renderToStaticMarkup(
+    <ContactFormEmail message={message} senderEmail={senderEmail} />
+  );

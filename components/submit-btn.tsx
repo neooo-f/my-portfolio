@@ -1,6 +1,7 @@
 import React from 'react';
+// import { <Form></Form> } from "react-dom";
 import { FaPaperPlane } from 'react-icons/fa';
-import { experimental_useFormStatus as useFormStatus } from 'react-dom';
+// import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 
 type Props = {
   t: {
@@ -9,7 +10,8 @@ type Props = {
 };
 
 export default function SubmitBtn({ t }: Props) {
-  const { pending } = useFormStatus();
+  // const { pending } = useFormStatus();
+  const pending = false;
 
   return (
     <button
