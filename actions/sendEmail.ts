@@ -2,50 +2,55 @@
 
 import { createTransport } from 'nodemailer';
 import { validateString, getErrorMessage } from '@/lib/utils';
-import { emailResponse } from '@/email/contact-form-email';
+import { render } from '@react-email/render';
+import { ContactFormEmail } from '@/email/contact-form-email';
+import { FormValues } from '@/types/form-values.type';
 
-export const sendEmail = async (formData: {
-  message: string;
-  senderMail: string;
-}) => {
-  // formData: FormData
-
-  // const senderEmail = formData.get('senderEmail');
-  // const message = formData.get('message');
-  const senderEmail = formData.senderMail;
+export const sendEmail = async (formData: FormValues) => {
+  const senderEmail = formData.senderEmail;
   const message = formData.message;
+  // const senderEmail = formData
+  //   .get('senderEmail')
+  //   ?.toString()
+  //   .replace(/<[^>]*>?/gm, '');
+
+  // const message = formData
+  //   .get('message')
+  //   ?.toString()
+  //   .replace(/<[^>]*>?/gm, '');
 
   const transporter = createTransport({
-    host: 'smtp.gmail.com', // Ihr SMTP-Host
-    port: 587, // Ihr SMTP-Port
-    secure: false, // true für SSL, false für TLS
+    host: process.env.SMTP_HOST, // SMTP-Host
+    port: Number(process.env.SMTP_PORT), // SMTP-Port
+    secure: Boolean(process.env.USE_SSL), // true = SSL, false = TLS
     auth: {
-      user: 'neo.fanetti@gmail.com', // Ihre E-Mail-Adresse
-      pass: process.env.EMAIL_PASSWORD, // Ihr E-Mail-Passwort
+      user: process.env.EMAIL_ADDRESS, // sender address
+      pass: process.env.EMAIL_APP_PASSWORD, // app password
     },
   });
 
-  // simple server-side validation
-  if (!validateString(senderEmail, 500)) {
+  // server-side validation
+  if (!validateString(senderEmail, 110)) {
     return {
       error: 'Invalid sender email',
     };
   }
-  if (!validateString(message, 5000)) {
+  if (!validateString(message, 3000)) {
     return {
       error: 'Invalid message',
     };
   }
 
-  console.log(sendEmail, message);
+  const emailResponse = render(ContactFormEmail({ message, senderEmail }), {
+    pretty: true,
+  });
+
   let data;
   try {
     data = await transporter.sendMail({
-      from: 'neo.fanetti@gmail.com',
-      to: 'neo.fanetti@gmail.com',
-      subject: 'Message from contact form', // Betreff
-      html: emailResponse(message, senderEmail),
-      // text: 'Dies ist eine Test-E-Mail von Nodemailer mit TLS.', // Inhalt
+      to: 'neo.fanetti@me.com',
+      subject: 'Message from contact form',
+      html: emailResponse,
     });
   } catch (error: unknown) {
     return {

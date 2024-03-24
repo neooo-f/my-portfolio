@@ -35,8 +35,6 @@ export default function Experience({ t }: Props) {
     ['LuGraduationCap', LuGraduationCap],
   ]);
 
-  // console.log(t.experiences);
-
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>{t.heading}</SectionHeading>

@@ -1,18 +1,14 @@
 import React from 'react';
-// import { <Form></Form> } from "react-dom";
 import { FaPaperPlane } from 'react-icons/fa';
-// import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 
 type Props = {
   t: {
     name: string;
   };
+  pending: boolean;
 };
 
-export default function SubmitBtn({ t }: Props) {
-  // const { pending } = useFormStatus();
-  const pending = false;
-
+export default function SubmitBtn({ t, pending }: Props) {
   return (
     <button
       type="submit"

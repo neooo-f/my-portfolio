@@ -4,11 +4,12 @@ import React, { useState } from 'react';
 import SectionHeading from './section-heading';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
-// import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './submit-btn';
 import toast from 'react-hot-toast';
 import { link } from '@/context/active-section-context';
-import { testLol } from '@/actions/testLol';
+import { sendEmail } from '@/actions/sendEmail';
+import * as Yup from 'yup';
+import { FormValues } from '@/types/form-values.type';
 
 type Props = {
   t: {
@@ -25,39 +26,45 @@ type Props = {
 
 export default function Contact({ t }: Props) {
   const { ref } = useSectionInView(t.links[t.links.length - 1].name);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [formData, setFormData] = useState({
-    message: '',
-    senderMail: '',
+  const validationSchema = Yup.object().shape({
+    senderEmail: Yup.string()
+      .email('Invalid email')
+      .required('Email is required'),
+    message: Yup.string().required('Message is required'),
   });
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleFormAction = async (formData: FormData) => {
     try {
-      // const data = await sendEmail(formData);
-      // const response = await fetch(
-      //   'https://jsonplaceholder.typicode.com/todos/1'
-      // );
-      // console.log(await response.json());
-      const data = await testLol();
-      console.log(data);
+      const validatedData: FormValues = await validationSchema.validate(
+        Object.fromEntries(formData),
+        {
+          abortEarly: false,
+        }
+      );
 
-      console.log(formData);
+      setIsSubmitting(true);
+
+      const { data, error } = await sendEmail(validatedData);
+      console.log(data, 'MAIL SENT SUCCESSFULLY!');
+
+      if (error) {
+        toast.error(error);
+        return;
+      }
+
+      setIsSubmitting(false);
       toast.success('Email sent successfully!');
     } catch (error) {
-      console.error('Error sending email:', error);
-      toast.error('Failed to send email');
+      if (error instanceof Yup.ValidationError) {
+        error.inner.forEach((validationError) => {
+          toast.error(validationError.message);
+        });
+      } else {
+        toast.error((error as Error).message);
+      }
     }
-  };
-
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = event.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
   };
 
   return (
@@ -90,28 +97,11 @@ export default function Contact({ t }: Props) {
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        onSubmit={handleSubmit}
+        action={async (formData) => handleFormAction(formData)}
       >
-        {/* <form
-        className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          // const { data, error } = await sendEmail(formData);
-          const data = await sendEmail(formData);
-          console.log(data);
-
-          // if (error) {
-          //   toast.error(error);
-          //   return;
-          // }
-
-          toast.success('Email sent successfully!');
-        }}
-      > */}
         <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="senderMail"
-          value={formData.senderMail}
-          onChange={handleChange}
+          name="senderEmail"
           type="email"
           required
           maxLength={500}
@@ -120,13 +110,11 @@ export default function Contact({ t }: Props) {
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="message"
-          value={formData.message}
-          onChange={handleChange}
           placeholder={t.messagePlaceholder}
           required
           maxLength={5000}
         />
-        <SubmitBtn t={t.submitButton} />
+        <SubmitBtn t={t.submitButton} pending={isSubmitting} />
       </form>
     </motion.section>
   );

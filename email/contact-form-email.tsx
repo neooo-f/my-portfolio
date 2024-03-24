@@ -1,7 +1,4 @@
-'use client';
-
-import { renderToStaticMarkup } from 'react-dom/server';
-import React from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import {
   Html,
   Body,
@@ -20,33 +17,26 @@ type ContactFormEmailProps = {
   senderEmail: string;
 };
 
-const ContactFormEmail: React.FC<ContactFormEmailProps> = ({
+export const ContactFormEmail = ({
   message,
   senderEmail,
-}) => {
-  return (
-    <Html>
-      <Head />
-      <Preview>New message from your portfolio site</Preview>
-      <Tailwind>
-        <Body className="bg-gray-100 text-black">
-          <Container>
-            <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
-              <Heading className="leading-tight">
-                You received the following message from the contact form
-              </Heading>
-              <Text>{message}</Text>
-              <Hr />
-              <Text>The sender's email is: {senderEmail}</Text>
-            </Section>
-          </Container>
-        </Body>
-      </Tailwind>
-    </Html>
-  );
-};
-
-export const emailResponse = (message: string, senderEmail: string) =>
-  renderToStaticMarkup(
-    <ContactFormEmail message={message} senderEmail={senderEmail} />
-  );
+}: ContactFormEmailProps): ReactElement<any> => (
+  <Html>
+    <Head />
+    <Preview>Eine neue Nachricht von deiner Portfolio Webseite!</Preview>
+    <Tailwind>
+      <Body className="bg-gray-100 text-black">
+        <Container>
+          <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
+            <Heading className="leading-tight">
+              Du hast folgende Nachricht aus dem Kontaktformular erhalten:
+            </Heading>
+            <Text>{message}</Text>
+            <Hr />
+            <Text>Die E-Mail Adresse des Absenders lautet: {senderEmail}</Text>
+          </Section>
+        </Container>
+      </Body>
+    </Tailwind>
+  </Html>
+);
