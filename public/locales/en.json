@@ -32,12 +32,10 @@
       "full stack developer",
       "with",
       "4 years",
-      "of experience. I enjoy building",
-      "websites & apps",
-      ". My focus is",
-      "React (Next.js)"
+      "of experience. I build professional",
+      "websites & applications."
     ],
-    "contactMe": "Contact me here",
+    "contactMe": "Project request",
     "downloadCV": "Download CV"
   },
   "about": {
@@ -104,7 +102,7 @@
       "Tailwind",
       "Prisma",
       "MySQL",
-      "Express",
+      "Express.js",
       "Java",
       "Framer Motion"
     ]

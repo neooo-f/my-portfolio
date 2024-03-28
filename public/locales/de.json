@@ -32,12 +32,10 @@
       "Full-Stack-Entwickler",
       "mit",
       "4 Jahren",
-      "Berufserfahrung. Ich programmiere professionelle",
-      "Webseiten & Apps",
-      ". Meinen Fokus lege ich auf",
-      "React (Next.js)"
+      "Berufserfahrung. Ich entwickle professionelle",
+      "Webseiten & Applikationen."
     ],
-    "contactMe": "Kontaktiere mich hier",
+    "contactMe": "Projektanfrage",
     "downloadCV": "Lebenslauf herunterladen"
   },
   "about": {
@@ -104,7 +102,7 @@
       "Tailwind",
       "Prisma",
       "MySQL",
-      "Express",
+      "Express.js",
       "Java",
       "Framer Motion"
     ]
@@ -122,7 +120,7 @@
       {
         "title": "Ausbildung",
         "location": "Bern, Schweiz",
-        "description": "Ich absolvierte meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler",
+        "description": "Ich absolviere meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler",
         "icon": "CgWorkAlt",
         "date": "2020 - Heute"
       }

@@ -7,17 +7,9 @@ import { ContactFormEmail } from '@/email/contact-form-email';
 import { FormValues } from '@/types/form-values.type';
 
 export const sendEmail = async (formData: FormValues) => {
-  const senderEmail = formData.senderEmail;
-  const message = formData.message;
-  // const senderEmail = formData
-  //   .get('senderEmail')
-  //   ?.toString()
-  //   .replace(/<[^>]*>?/gm, '');
-
-  // const message = formData
-  //   .get('message')
-  //   ?.toString()
-  //   .replace(/<[^>]*>?/gm, '');
+  // sanitizing input
+  const senderEmail = formData.senderEmail.replace(/<[^>]*>?/gm, '');
+  const message = formData.message.replace(/<[^>]*>?/gm, '');
 
   const transporter = createTransport({
     host: process.env.SMTP_HOST, // SMTP-Host
