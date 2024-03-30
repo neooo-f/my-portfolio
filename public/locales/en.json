@@ -145,7 +145,7 @@
     "title": "2030 Neo Fanetti. All rights reserved.",
     "descreption": [
       "About this website:",
-      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend"
+      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email."
     ]
   }
 }

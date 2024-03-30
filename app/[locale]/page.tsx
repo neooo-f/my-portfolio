@@ -7,7 +7,6 @@ import SectionDivider from '@/components/section-divider';
 import Skills from '@/components/skills';
 import getTranslation from '@/lib/i18n/getTranslation';
 import { Locale } from '@/i18n';
-import { link } from '@/context/active-section-context';
 
 type Props = {
   params: { locale: Locale };

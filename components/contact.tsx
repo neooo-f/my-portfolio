@@ -26,8 +26,11 @@ type Props = {
 
 export default function Contact({ t }: Props) {
   const { ref } = useSectionInView(t.links[t.links.length - 1].name);
+  const [inputValues, setInputValues] = useState({
+    senderEmail: '',
+    message: '',
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   const validationSchema = Yup.object().shape({
     senderEmail: Yup.string()
@@ -35,6 +38,16 @@ export default function Contact({ t }: Props) {
       .required('Email is required'),
     message: Yup.string().required('Message is required'),
   });
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
+    const { name, value } = event.target;
+    setInputValues((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleFormAction = async (formData: FormData) => {
     try {
@@ -57,7 +70,7 @@ export default function Contact({ t }: Props) {
       }
 
       toast.success('Email sent successfully!');
-      setHasSubmitted(true);
+      setInputValues({ senderEmail: '', message: '' });
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
         error.inner.forEach((validationError) => {
@@ -89,41 +102,41 @@ export default function Contact({ t }: Props) {
     >
       <SectionHeading>{t.heading}</SectionHeading>
 
-      {hasSubmitted ? (
-        <>empty state</>
-      ) : (
-        <>
-          <p className="text-gray-700 -mt-6 dark:text-white/80">
-            {t.description[0]}{' '}
-            <a className="underline" href="mailto:example@gmail.com">
-              {t.description[1]}
-            </a>{' '}
-            {t.description[2]}
-          </p>
+      <>
+        <p className="text-gray-700 -mt-6 dark:text-white/80">
+          {t.description[0]}{' '}
+          <a className="underline" href="mailto:neo.fanetti@gmail.com">
+            {t.description[1]}
+          </a>{' '}
+          {t.description[2]} Ich werde mich innerhalb 14 Tagen melden.
+        </p>
 
-          <form
-            className="mt-10 flex flex-col dark:text-black"
-            action={async (formData) => handleFormAction(formData)}
-          >
-            <input
-              className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-              name="senderEmail"
-              type="email"
-              required
-              maxLength={500}
-              placeholder={t.emailPlaceholder}
-            />
-            <textarea
-              className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-              name="message"
-              placeholder={t.messagePlaceholder}
-              required
-              maxLength={5000}
-            />
-            <SubmitBtn t={t.submitButton} pending={isSubmitting} />
-          </form>
-        </>
-      )}
+        <form
+          className="mt-10 flex flex-col dark:text-black"
+          action={async (formData) => handleFormAction(formData)}
+        >
+          <input
+            className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+            name="senderEmail"
+            type="email"
+            value={inputValues.senderEmail}
+            onChange={handleInputChange}
+            required
+            maxLength={500}
+            placeholder={t.emailPlaceholder}
+          />
+          <textarea
+            className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+            name="message"
+            value={inputValues.message}
+            onChange={handleInputChange}
+            placeholder={t.messagePlaceholder}
+            required
+            maxLength={5000}
+          />
+          <SubmitBtn t={t.submitButton} pending={isSubmitting} />
+        </form>
+      </>
     </motion.section>
   );
 }
