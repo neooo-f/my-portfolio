@@ -120,7 +120,7 @@
       {
         "title": "Ausbildung",
         "location": "Bern, Schweiz",
-        "description": "Ich absolviere meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler",
+        "description": "Ich absolviere meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler.",
         "icon": "CgWorkAlt",
         "date": "2020 - Heute"
       }
@@ -131,7 +131,7 @@
     "descreption": [
       "Bitte kontaktiere mich direkt unter",
       "neo.fanetti@gmail.com",
-      "oder über dieses Formular."
+      "oder über dieses Formular. Ich werde mich innerhalb 14 Tagen melden."
     ],
     "placeholder": {
       "email": "Deine E-Mail",
@@ -142,10 +142,24 @@
     "name": "Abschicken"
   },
   "footer": {
-    "title": "2030 Neo Fanetti. Alle Rechte vorbehalten",
+    "title": "2030 Neo Fanetti. Alle Rechte vorbehalten.",
+    "legal": "Rechtliches",
     "descreption": [
       "Über diese Webseite:",
       "Erstellt mit React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email."
     ]
+  },
+  "legalModal": {
+    "header": "Rechtliches",
+    "body": [
+      "Impressum",
+      "Kontakt",
+      "E-Mail: info.neo.fanetti@gmail.com",
+      "Verantwortlicher für den Inhalt",
+      "Neo Fanetti",
+      "Gestaltung und technische Realisierung",
+      "Neo Fanetti"
+    ],
+    "footer": ["part1", "part2"]
   }
 }

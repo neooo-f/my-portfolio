@@ -26,6 +26,8 @@ type Props = {
 
 export default function Contact({ t }: Props) {
   const { ref } = useSectionInView(t.links[t.links.length - 1].name);
+
+  // keep track of value to delete after submitting
   const [inputValues, setInputValues] = useState({
     senderEmail: '',
     message: '',
@@ -108,7 +110,7 @@ export default function Contact({ t }: Props) {
           <a className="underline" href="mailto:neo.fanetti@gmail.com">
             {t.description[1]}
           </a>{' '}
-          {t.description[2]} Ich werde mich innerhalb 14 Tagen melden.
+          {t.description[2]}
         </p>
 
         <form

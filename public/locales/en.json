@@ -131,7 +131,7 @@
     "descreption": [
       "Please contact me directly at",
       "neo.fanetti@gmail.com",
-      "or through this form."
+      "or through this form. I will contact you within 14 days."
     ],
     "placeholder": {
       "email": "Your email",
@@ -143,9 +143,15 @@
   },
   "footer": {
     "title": "2030 Neo Fanetti. All rights reserved.",
+    "legal": "Legal",
     "descreption": [
       "About this website:",
       "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email."
     ]
+  },
+  "legalModal": {
+    "header": "Legal",
+    "body": [],
+    "footer": []
   }
 }

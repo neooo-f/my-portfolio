@@ -1,21 +1,38 @@
 'use client';
 
+import { useEffect } from 'react';
+
 type Props = {
+  t: {
+    header: string;
+    body: string[];
+    footer: string[];
+  };
   isOpen: boolean;
   onClose: () => void;
 };
 
-export default function ImprintModal({ isOpen, onClose }: Props) {
+export default function LegalModal({ t, isOpen, onClose }: Props) {
+  // disables scrolling in the background while modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
     <div
       id="default-modal"
       tabIndex={-1}
       className={` ${
         !isOpen && 'hidden'
-      } flex justify-center items-center fixed top-0 right-0 bottom-0 left-0 z-50 bg-gray-800 bg-opacity-50`}
-      //   className={` ${
-      //     !isOpen && 'hidden'
-      //   } overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}
+      } z-[1000] flex justify-center items-center fixed top-0 right-0 bottom-0 left-0 bg-gray-800 bg-opacity-50`}
     >
       <div className="relative p-4 w-full max-w-2xl max-h-full">
         {/* Modal content */}
@@ -23,7 +40,7 @@ export default function ImprintModal({ isOpen, onClose }: Props) {
           {/* Modal header */}
           <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Terms of Service
+              {t.header}
             </h3>
             <button
               type="button"
@@ -51,17 +68,20 @@ export default function ImprintModal({ isOpen, onClose }: Props) {
           </div>
           {/* Modal body */}
           <div className="p-4 md:p-5 space-y-4">
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              With less than a month to go before the European Union enacts new
-              consumer privacy laws for its citizens, companies around the world
-              are updating their terms of service agreements to comply.
+            <p className="text-base font-semibold leading-relaxed text-gray-900 dark:text-white">
+              {t.body[0]}
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              The European Union’s General Data Protection Regulation (G.D.P.R.)
-              goes into effect on May 25 and is meant to ensure a common set of
-              data rights in the European Union. It requires organizations to
-              notify users as soon as possible of high-risk data breaches that
-              could personally affect them.
+              <span className="font-semibold">{t.body[1]}</span> <br />
+              <span>{t.body[2]}</span>
+            </p>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              <span className="font-semibold">{t.body[3]}</span> <br />
+              <span>{t.body[4]}</span>
+            </p>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              <span className="font-semibold">{t.body[5]}</span> <br />
+              <span>{t.body[6]}</span>
             </p>
           </div>
           {/* Modal footer */}

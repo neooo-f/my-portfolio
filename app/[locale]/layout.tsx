@@ -53,7 +53,13 @@ export default async function RootLayout({ children, params }: Props) {
             <Footer
               t={{
                 title: t('footer.title') as string,
+                legal: t('footer.legal') as string,
                 descreption: t('footer.descreption') as string[],
+                legalModal: {
+                  header: t('legalModal.header') as string,
+                  body: t('legalModal.body') as string[],
+                  footer: t('legalModal.footer') as string[],
+                },
               }}
             />
 
