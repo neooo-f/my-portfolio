@@ -58,7 +58,6 @@ export default async function RootLayout({ children, params }: Props) {
                 legalModal: {
                   header: t('legalModal.header') as string,
                   body: t('legalModal.body') as string[],
-                  footer: t('legalModal.footer') as string[],
                 },
               }}
             />

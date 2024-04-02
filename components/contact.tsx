@@ -28,7 +28,7 @@ export default function Contact({ t }: Props) {
   const { ref } = useSectionInView(t.links[t.links.length - 1].name);
 
   // keep track of value to delete after submitting
-  const [inputValues, setInputValues] = useState({
+  const [inputValues, setInputValues] = useState<FormValues>({
     senderEmail: '',
     message: '',
   });

@@ -11,7 +11,6 @@ type Props = {
     legalModal: {
       header: string;
       body: string[];
-      footer: string[];
     };
   };
 };

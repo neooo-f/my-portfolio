@@ -151,7 +151,14 @@
   },
   "legalModal": {
     "header": "Legal",
-    "body": [],
-    "footer": []
+    "body": [
+      "Imprint",
+      "Contact",
+      "E-Mail: info.neo.fanetti@gmail.com",
+      "Responsible for content",
+      "Neo Fanetti",
+      "Design and technical implementation",
+      "Neo Fanetti"
+    ]
   }
 }
