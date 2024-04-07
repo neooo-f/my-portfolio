@@ -120,7 +120,7 @@ export default function Contact({ t }: Props) {
       <>
         <p className="text-gray-700 -mt-6 dark:text-white/80">
           {t.description[0]}{' '}
-          <a className="underline" href="mailto:neo.fanetti@gmail.com">
+          <a className="underline" href="mailto:info.neo.fanetti@gmail.com">
             {t.description[1]}
           </a>{' '}
           {t.description[2]}
