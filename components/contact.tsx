@@ -120,10 +120,8 @@ export default function Contact({ t }: Props) {
           <input
             className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
             name="senderEmail"
-            type="email"
             value={inputValues.senderEmail}
             onChange={handleInputChange}
-            required
             maxLength={500}
             placeholder={t.emailPlaceholder}
           />
@@ -133,7 +131,6 @@ export default function Contact({ t }: Props) {
             value={inputValues.message}
             onChange={handleInputChange}
             placeholder={t.messagePlaceholder}
-            required
             maxLength={5000}
           />
           <SubmitBtn t={t.submitButton} pending={isSubmitting} />

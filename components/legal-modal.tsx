@@ -72,7 +72,7 @@ export default function LegalModal({ t, isOpen, onClose }: Props) {
           </div>
           {/* Modal body */}
           <div className="p-4 md:p-5 space-y-4">
-            <p className="text-base font-semibold leading-relaxed text-gray-900 dark:text-white">
+            <p className="text-xl font-semibold leading-relaxed text-gray-900 dark:text-white">
               {t.body[0]}
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
