@@ -1,0 +1,174 @@
+{
+  "links": [
+    {
+      "name": "Home",
+      "hash": "#home"
+    },
+    {
+      "name": "About",
+      "hash": "#about"
+    },
+    {
+      "name": "Projects",
+      "hash": "#projects"
+    },
+    {
+      "name": "Skills",
+      "hash": "#skills"
+    },
+    {
+      "name": "Experience",
+      "hash": "#experience"
+    },
+    {
+      "name": "Contact",
+      "hash": "#contact"
+    }
+  ],
+  "intro": {
+    "description": [
+      "Hello, I'm Neo.",
+      "I'm a",
+      "full stack developer",
+      "with",
+      "4 years",
+      "of experience. I build professional",
+      "websites & desktop applications."
+    ],
+    "contactMe": "Project request",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "heading": "About me",
+    "description": [
+      "At the moment i'm finishing my apprenticeship in",
+      "Computer science",
+      ". Recently I decided to expand my passion for programming. I started working on my own projects and learned",
+      "full-stack web development.",
+      "My favourite part of programming",
+      "is the possibility to be creative and create efficient solutions for daily problems. I",
+      "like",
+      "the feeling of finally figuring out a solution to a problem after thinking about it for a long time. My core stack is",
+      "React, Nest.js (Node.js) with Prisma and MySQL",
+      ". I prefer using TypeScript to be type safety so i don't have to deal with annoying type errors. I am always looking forward to learn new technologies.",
+      "When I'm not coding",
+      ", I enjoy doing sports in general, hanging out with my friends, and playing soccer. I also enjoy",
+      "learning new things."
+    ]
+  },
+  "projects": {
+    "heading": "My Projects",
+    "data": [
+      {
+        "title": "Nespresso Coffee Management",
+        "description": "A fullstack application wich is used to manage access of your coffee machine.",
+        "tags": ["Vue", "PHP", "Frontend", "Backend"],
+        "imageName": "nespresso"
+      },
+      {
+        "title": "The Movie Database",
+        "description": "A frontend application which gives you an overview of current movies.",
+        "tags": ["Vue", "API", "Frontend"],
+        "imageName": "moviedb"
+      },
+      {
+        "title": "ICT-Skills Evaluation Tool",
+        "description": "A desktop application which lets you track a competition and evaluate participants.",
+        "tags": ["Java", "JavaFX", "Threads"],
+        "imageName": "ictskills"
+      },
+      {
+        "title": "Contact Management",
+        "description": "A frontend application which lets you save and manage your contacts.",
+        "tags": ["Vue", "Frontend", "Form"],
+        "imageName": "contacts"
+      }
+    ]
+  },
+  "skills": {
+    "heading": "My skills",
+    "data": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "React.js",
+      "Vue.js",
+      "Next.js",
+      "Node.js",
+      "Nest.js",
+      "Git",
+      "Tailwind",
+      "Prisma",
+      "MySQL",
+      "Express.js",
+      "Java",
+      "Framer Motion"
+    ]
+  },
+  "experience": {
+    "heading": "My Experience",
+    "data": [
+      {
+        "title": "School",
+        "location": "Oftringen, Switzerland",
+        "description": "I completed my compulsory schooling at the District School Oftringen.",
+        "icon": "LuGraduationCap",
+        "date": "2017 - 2020"
+      },
+      {
+        "title": "Apprenticeship",
+        "location": "Bern, Switzerland",
+        "description": "I complete my apprenticeship at Swisscom Schweiz AG as an IT specialist, specializing in application development.",
+        "icon": "CgWorkAlt",
+        "date": "2020 - now"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact me",
+    "descreption": [
+      "Please contact me directly at",
+      "info.neo.fanetti@gmail.com",
+      "or through this form. I will contact you within 14 days."
+    ],
+    "placeholder": {
+      "email": "Your email",
+      "message": "Your message"
+    },
+    "error": {
+      "email": {
+        "invalid": "Invalid email",
+        "required": "Email is required"
+      },
+      "message": {
+        "required": "Message is required"
+      }
+    },
+    "success": "Email sent successfully!"
+  },
+  "submitButton": {
+    "name": "Submit"
+  },
+  "footer": {
+    "title": "2030 Neo Fanetti. All rights reserved.",
+    "legal": "Legal",
+    "descreption": [
+      "About this website:",
+      "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email."
+    ]
+  },
+  "legalModal": {
+    "header": "Legal",
+    "body": [
+      "Imprint",
+      "Contact",
+      "E-Mail: info.neo.fanetti@gmail.com",
+      "Responsible for content",
+      "Neo Fanetti",
+      "Design and technical implementation",
+      "Neo Fanetti"
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "links": [
+    {
+      "name": "Start",
+      "hash": "#home"
+    },
+    {
+      "name": "Über",
+      "hash": "#about"
+    },
+    {
+      "name": "Projekte",
+      "hash": "#projects"
+    },
+    {
+      "name": "Fähigkeiten",
+      "hash": "#skills"
+    },
+    {
+      "name": "Werdegang",
+      "hash": "#experience"
+    },
+    {
+      "name": "Kontakt",
+      "hash": "#contact"
+    }
+  ],
+  "intro": {
+    "description": [
+      "Hallo, ich bin Neo.",
+      "Ich bin",
+      "Full-Stack-Entwickler",
+      "mit",
+      "4 Jahren",
+      "Berufserfahrung. Ich entwickle professionelle",
+      "Webseiten & Desktop-Applikationen."
+    ],
+    "contactMe": "Projektanfrage",
+    "downloadCV": "Lebenslauf herunterladen"
+  },
+  "about": {
+    "heading": "Über mich",
+    "description": [
+      "Aktuell schliesse ich meine Lehre als",
+      "Informatiker ",
+      "ab. Letztens entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
+      "full-stack web development.",
+      "Am meisten Spass daran macht mir",
+      "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu finden. Ich",
+      "mag",
+      "das Gefühl, wenn man endlich eine Lösung für ein Problem hat, nachdem man lange daran herumstudiert hat. Meine bevorzugten Technologien sind",
+      "React, Nest.js (Node.js) mit Prisma und MySQL",
+      ". Ich präferiere TypeScript um eine klare Typifizierung zu haben, so dass ich mich nicht mit unnötigen type-errors herumschlagen muss. Zusätzlich eigne ich mir gerne neues Wissen an.",
+      "Wenn ich nicht programmiere",
+      ", mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
+      "neue Erfahrungen zu sammeln."
+    ]
+  },
+  "projects": {
+    "heading": "Meine Projekte",
+    "data": [
+      {
+        "title": "Nespresso Kaffeeverwaltung",
+        "description": "Eine Fullstack Applikation um elektronisch den Zugriff auf seine Kaffeemaschine zu verwalten.",
+        "tags": ["Vue", "PHP", "Frontend", "Backend"],
+        "imageName": "nespresso"
+      },
+      {
+        "title": "The Movie Database",
+        "description": "Eine Frontend Applikation um eine Übersicht auf aktuelle Filme zu erhalten.",
+        "tags": ["Vue", "API", "Frontend"],
+        "imageName": "moviedb"
+      },
+      {
+        "title": "ICT-Skills Evaluation Tool",
+        "description": "Eine Desktop Applikation mit welcher man einen Wettbewerb tracken und Teilnehmer evaluieren kann.",
+        "tags": ["Java", "JavaFX", "Threads"],
+        "imageName": "ictskills"
+      },
+      {
+        "title": "Kontakverwaltung",
+        "description": "Eine Frontend Applikation um seine Kontake abzuspeichern und anschliessend zu verwalten",
+        "tags": ["Vue", "Frontend", "Formular"],
+        "imageName": "contacts"
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Meine Fähigkeiten",
+    "data": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "React.js",
+      "Vue.js",
+      "Next.js",
+      "Node.js",
+      "Nest.js",
+      "Git",
+      "Tailwind",
+      "Prisma",
+      "MySQL",
+      "Express.js",
+      "Java",
+      "Framer Motion"
+    ]
+  },
+  "experience": {
+    "heading": "Beruflicher Werdegang",
+    "data": [
+      {
+        "title": "Schule",
+        "location": "Oftringen, Schweiz",
+        "description": "Ich schloss meine obligatorische Schulzeit an der Bezirksschule Oftringen ab.",
+        "icon": "LuGraduationCap",
+        "date": "2017 - 2020"
+      },
+      {
+        "title": "Ausbildung",
+        "location": "Bern, Schweiz",
+        "description": "Ich absolviere meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler.",
+        "icon": "CgWorkAlt",
+        "date": "2020 - Heute"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Kontaktiere mich",
+    "descreption": [
+      "Bitte kontaktiere mich direkt unter",
+      "info.neo.fanetti@gmail.com",
+      "oder über dieses Formular. Ich werde mich innerhalb 14 Tagen melden."
+    ],
+    "placeholder": {
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht"
+    },
+    "error": {
+      "email": {
+        "invalid": "Ungültige E-Mail Adresse",
+        "required": "Keine E-Mail Adresse eingegeben"
+      },
+      "message": {
+        "required": "Keine Nachricht eingegeben"
+      }
+    },
+    "success": "Die E-Mail wurde erfolgreich gesendet!"
+  },
+  "submitButton": {
+    "name": "Abschicken"
+  },
+  "footer": {
+    "title": "2030 Neo Fanetti. Alle Rechte vorbehalten.",
+    "legal": "Rechtliches",
+    "descreption": [
+      "Über diese Webseite:",
+      "Erstellt mit React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email."
+    ]
+  },
+  "legalModal": {
+    "header": "Rechtliches",
+    "body": [
+      "Impressum",
+      "Kontakt",
+      "E-Mail: info.neo.fanetti@gmail.com",
+      "Verantwortlicher für den Inhalt",
+      "Neo Fanetti",
+      "Gestaltung und technische Realisierung",
+      "Neo Fanetti"
+    ]
+  }
+}
