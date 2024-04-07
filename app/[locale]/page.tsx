@@ -61,6 +61,16 @@ export default async function Home({ params }: Props) {
           description: t('contact.descreption') as string[],
           emailPlaceholder: t('contact.placeholder.email') as string,
           messagePlaceholder: t('contact.placeholder.message') as string,
+          error: {
+            email: {
+              invalid: t('contact.error.email.invalid') as string,
+              required: t('contact.error.email.required') as string,
+            },
+            message: {
+              required: t('contact.error.message.required') as string,
+            },
+          },
+          success: t('contact.success') as string,
           submitButton: {
             name: t('submitButton.name') as string,
           },

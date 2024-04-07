@@ -33,7 +33,7 @@
       "mit",
       "4 Jahren",
       "Berufserfahrung. Ich entwickle professionelle",
-      "Webseiten & Applikationen."
+      "Webseiten & Desktop-Applikationen."
     ],
     "contactMe": "Projektanfrage",
     "downloadCV": "Lebenslauf herunterladen"
@@ -136,7 +136,17 @@
     "placeholder": {
       "email": "Deine E-Mail",
       "message": "Deine Nachricht"
-    }
+    },
+    "error": {
+      "email": {
+        "invalid": "Ungültige E-Mail Adresse",
+        "required": "Keine E-Mail Adresse eingegeben"
+      },
+      "message": {
+        "required": "Keine Nachricht eingegeben"
+      }
+    },
+    "success": "Die E-Mail wurde erfolgreich gesendet!"
   },
   "submitButton": {
     "name": "Abschicken"

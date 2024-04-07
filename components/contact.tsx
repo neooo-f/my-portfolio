@@ -18,6 +18,16 @@ type Props = {
     description: string[];
     emailPlaceholder: string;
     messagePlaceholder: string;
+    error: {
+      email: {
+        invalid: string;
+        required: string;
+      };
+      message: {
+        required: string;
+      };
+    };
+    success: string;
     submitButton: {
       name: string;
     };
@@ -36,9 +46,9 @@ export default function Contact({ t }: Props) {
 
   const validationSchema = Yup.object().shape({
     senderEmail: Yup.string()
-      .email('Invalid email')
-      .required('Email is required'),
-    message: Yup.string().required('Message is required'),
+      .email(t.error.email.invalid)
+      .required(t.error.email.required),
+    message: Yup.string().required(t.error.message.required),
   });
 
   const handleInputChange = (
@@ -63,7 +73,6 @@ export default function Contact({ t }: Props) {
       setIsSubmitting(true);
 
       const { data, error } = await sendEmail(validatedData);
-      console.log(data, 'MAIL SENT SUCCESSFULLY!');
       setIsSubmitting(false);
 
       if (error) {
@@ -71,13 +80,17 @@ export default function Contact({ t }: Props) {
         return;
       }
 
-      toast.success('Email sent successfully!');
+      toast.success(t.success);
       setInputValues({ senderEmail: '', message: '' });
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
+        let validationErrors: string[] = [];
         error.inner.forEach((validationError) => {
-          toast.error(validationError.message);
+          validationErrors.push(validationError.message);
+          // old way
+          // toast.error(validationError.message);
         });
+        toast.error(validationErrors.join(', '));
       } else {
         toast.error((error as Error).message);
       }

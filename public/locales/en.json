@@ -33,7 +33,7 @@
       "with",
       "4 years",
       "of experience. I build professional",
-      "websites & applications."
+      "websites & desktop applications."
     ],
     "contactMe": "Project request",
     "downloadCV": "Download CV"
@@ -78,7 +78,7 @@
         "imageName": "ictskills"
       },
       {
-        "title": "Kontakverwaltung",
+        "title": "Contact Management",
         "description": "A frontend application which lets you save and manage your contacts.",
         "tags": ["Vue", "Frontend", "Form"],
         "imageName": "contacts"
@@ -120,7 +120,7 @@
       {
         "title": "Apprenticeship",
         "location": "Bern, Switzerland",
-        "description": "I completed my apprenticeship at Swisscom Schweiz AG as an IT specialist, specializing in application development.",
+        "description": "I complete my apprenticeship at Swisscom Schweiz AG as an IT specialist, specializing in application development.",
         "icon": "CgWorkAlt",
         "date": "2020 - now"
       }
@@ -136,7 +136,17 @@
     "placeholder": {
       "email": "Your email",
       "message": "Your message"
-    }
+    },
+    "error": {
+      "email": {
+        "invalid": "Invalid email",
+        "required": "Email is required"
+      },
+      "message": {
+        "required": "Message is required"
+      }
+    },
+    "success": "Email sent successfully!"
   },
   "submitButton": {
     "name": "Submit"
