@@ -77,15 +77,23 @@ export default function LegalModal({ t, isOpen, onClose }: Props) {
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
               <span className="font-semibold">{t.body[1]}</span> <br />
-              <span>{t.body[2]}</span>
+              <span>
+                {t.body[2]}{' '}
+                <a
+                  className="underline"
+                  href="mailto:info.neo.fanetti@gmail.com"
+                >
+                  {t.body[3]}
+                </a>
+              </span>
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              <span className="font-semibold">{t.body[3]}</span> <br />
-              <span>{t.body[4]}</span>
+              <span className="font-semibold">{t.body[4]}</span> <br />
+              <span>{t.body[5]}</span>
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              <span className="font-semibold">{t.body[5]}</span> <br />
-              <span>{t.body[6]}</span>
+              <span className="font-semibold">{t.body[6]}</span> <br />
+              <span>{t.body[7]}</span>
             </p>
           </div>
         </div>

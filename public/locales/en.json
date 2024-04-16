@@ -111,18 +111,18 @@
     "heading": "My Experience",
     "data": [
       {
-        "title": "School",
-        "location": "Oftringen, Switzerland",
-        "description": "I completed my compulsory schooling at the District School Oftringen.",
-        "icon": "LuGraduationCap",
-        "date": "2017 - 2020"
-      },
-      {
         "title": "Apprenticeship",
         "location": "Bern, Switzerland",
         "description": "I complete my apprenticeship at Swisscom Schweiz AG as an IT specialist, specializing in application development.",
         "icon": "CgWorkAlt",
         "date": "2020 - now"
+      },
+      {
+        "title": "School",
+        "location": "Oftringen, Switzerland",
+        "description": "I completed my compulsory schooling at the District School Oftringen.",
+        "icon": "LuGraduationCap",
+        "date": "2017 - 2020"
       }
     ]
   },
@@ -164,7 +164,8 @@
     "body": [
       "Imprint",
       "Contact",
-      "E-Mail: info.neo.fanetti@gmail.com",
+      "E-Mail:",
+      "info.neo.fanetti@gmail.com",
       "Responsible for content",
       "Neo Fanetti",
       "Design and technical implementation",
