@@ -111,18 +111,18 @@
     "heading": "Beruflicher Werdegang",
     "data": [
       {
-        "title": "Schule",
-        "location": "Oftringen, Schweiz",
-        "description": "Ich schloss meine obligatorische Schulzeit an der Bezirksschule Oftringen ab.",
-        "icon": "LuGraduationCap",
-        "date": "2017 - 2020"
-      },
-      {
         "title": "Ausbildung",
         "location": "Bern, Schweiz",
         "description": "Ich absolviere meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler.",
         "icon": "CgWorkAlt",
         "date": "2020 - Heute"
+      },
+      {
+        "title": "Schule",
+        "location": "Oftringen, Schweiz",
+        "description": "Ich schloss meine obligatorische Schulzeit an der Bezirksschule Oftringen ab.",
+        "icon": "LuGraduationCap",
+        "date": "2017 - 2020"
       }
     ]
   },
@@ -164,7 +164,8 @@
     "body": [
       "Impressum",
       "Kontakt",
-      "E-Mail: info.neo.fanetti@gmail.com",
+      "E-Mail:",
+      "info.neo.fanetti@gmail.com",
       "Verantwortlicher für den Inhalt",
       "Neo Fanetti",
       "Gestaltung und technische Realisierung",
