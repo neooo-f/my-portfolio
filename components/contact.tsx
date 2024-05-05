@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionHeading from './section-heading';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import SubmitBtn from './submit-btn';
-import toast from 'react-hot-toast';
 import { link } from '@/context/active-section-context';
 import { sendEmail } from '@/actions/sendEmail';
 import * as Yup from 'yup';
 import { FormValues } from '@/types/form-values.type';
+import SuccessAlert from './success-alert';
+import ErrorAlert from './error-alert';
 
 type Props = {
   t: {
@@ -27,7 +28,9 @@ type Props = {
         required: string;
       };
     };
-    success: string;
+    successAlert: {
+      message: string;
+    };
     submitButton: {
       name: string;
     };
@@ -37,12 +40,26 @@ type Props = {
 export default function Contact({ t }: Props) {
   const { ref } = useSectionInView(t.links[t.links.length - 1].name);
 
-  // keep track of value to delete after submitting
+  // keep track of values to delete after submitting and passing to server
   const [inputValues, setInputValues] = useState<FormValues>({
     senderEmail: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
+  const [displayError, setDisplayError] = useState<string | undefined>(
+    undefined
+  );
+
+  // let success alert dissapear after 6 seconds
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowSuccessAlert(false);
+    }, 6000);
+
+    return () => clearTimeout(timeout);
+  }, [showSuccessAlert]);
 
   const validationSchema = Yup.object().shape({
     senderEmail: Yup.string()
@@ -61,38 +78,40 @@ export default function Contact({ t }: Props) {
     }));
   };
 
-  const handleFormAction = async (formData: FormData) => {
+  const handleFormAction = async (formData: FormValues) => {
     try {
+      console.log(formData);
+
       const validatedData: FormValues = await validationSchema.validate(
-        Object.fromEntries(formData),
+        inputValues,
         {
           abortEarly: false,
         }
       );
 
       setIsSubmitting(true);
-
       const { data, error } = await sendEmail(validatedData);
       setIsSubmitting(false);
 
       if (error) {
-        toast.error(error);
+        setDisplayError(error);
+        setShowErrorAlert(true);
         return;
       }
 
-      toast.success(t.success);
+      setShowErrorAlert(false);
+      setShowSuccessAlert(true);
       setInputValues({ senderEmail: '', message: '' });
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
         let validationErrors: string[] = [];
         error.inner.forEach((validationError) => {
           validationErrors.push(validationError.message);
-          // old way
-          // toast.error(validationError.message);
         });
-        toast.error(validationErrors.join(', '));
+        setDisplayError(validationErrors.join(', '));
+        setShowErrorAlert(true);
       } else {
-        toast.error((error as Error).message);
+        setDisplayError((error as Error).message);
       }
     }
   };
@@ -128,8 +147,13 @@ export default function Contact({ t }: Props) {
 
         <form
           className="mt-10 flex flex-col dark:text-black"
-          action={async (formData) => handleFormAction(formData)}
+          onSubmit={async (event) => {
+            event.preventDefault();
+            await handleFormAction(inputValues);
+          }}
         >
+          {showSuccessAlert && <SuccessAlert t={t.successAlert} />}
+          {showErrorAlert && <ErrorAlert message={displayError || 'Error'} />}
           <input
             className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
             name="senderEmail"

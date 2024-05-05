@@ -70,7 +70,9 @@ export default async function Home({ params }: Props) {
               required: t('contact.error.message.required') as string,
             },
           },
-          success: t('contact.success') as string,
+          successAlert: {
+            message: t('contact.success') as string,
+          },
           submitButton: {
             name: t('submitButton.name') as string,
           },

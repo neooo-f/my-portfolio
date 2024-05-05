@@ -5,7 +5,6 @@ import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/components/footer';
 import ThemeSwitch from '@/components/theme-switch';
 import ThemeContextProvider from '@/context/theme-context';
-import { Toaster } from 'react-hot-toast';
 import { Locale, i18nConfig } from '@/i18n';
 import getTranslation from '@/lib/i18n/getTranslation';
 import LanguageSwitch from '@/components/language-switch';
@@ -61,8 +60,6 @@ export default async function RootLayout({ children, params }: Props) {
                 },
               }}
             />
-
-            <Toaster position="top-right" />
             <LanguageSwitch />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
