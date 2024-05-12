@@ -78,10 +78,8 @@ export default function Contact({ t }: Props) {
     }));
   };
 
-  const handleFormAction = async (formData: FormValues) => {
+  const handleFormAction = async () => {
     try {
-      console.log(formData);
-
       const validatedData: FormValues = await validationSchema.validate(
         inputValues,
         {
@@ -149,7 +147,7 @@ export default function Contact({ t }: Props) {
           className="mt-10 flex flex-col dark:text-black"
           onSubmit={async (event) => {
             event.preventDefault();
-            await handleFormAction(inputValues);
+            await handleFormAction();
           }}
         >
           {showSuccessAlert && <SuccessAlert t={t.successAlert} />}
