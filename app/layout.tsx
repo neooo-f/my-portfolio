@@ -1,13 +1,11 @@
 import Header from '@/components/header';
-import '../globals.css';
+import './globals.css';
 import { Inter } from 'next/font/google';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/components/footer';
 import ThemeSwitch from '@/components/theme-switch';
 import ThemeContextProvider from '@/context/theme-context';
-import { Locale, i18nConfig } from '@/i18n';
 import getTranslation from '@/lib/i18n/getTranslation';
-import LanguageSwitch from '@/components/language-switch';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,22 +14,17 @@ export const metadata = {
   description: 'developer portfolio',
 };
 
-export async function generateStaticParams() {
-  return i18nConfig.locales.map((locale: Locale) => ({ locale: locale }));
-}
-
 type Props = {
   children: React.ReactNode;
-  params: {
-    locale: Locale;
-  };
 };
 
-export default async function RootLayout({ children, params }: Props) {
-  const t = await getTranslation(params.locale);
+export default async function RootLayout({ children }: Props) {
+  // FIXME: ignoring language logic TEMPORARY SOLUTION
+  const t = await getTranslation('de');
 
   return (
-    <html lang={params.locale} className="!scroll-smooth">
+    // FIXME: ignoring language logic TEMPORARY SOLUTION
+    <html lang={'de'} className="!scroll-smooth">
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
@@ -43,7 +36,8 @@ export default async function RootLayout({ children, params }: Props) {
               links: t('links') as [],
             }}
           >
-            <Header
+            {children}
+            {/* <Header
               t={{
                 links: t('links') as [],
               }}
@@ -61,7 +55,7 @@ export default async function RootLayout({ children, params }: Props) {
               }}
             />
             <LanguageSwitch />
-            <ThemeSwitch />
+            <ThemeSwitch /> */}
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>

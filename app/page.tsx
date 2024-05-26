@@ -1,22 +1,25 @@
 import About from '@/components/about';
 import Contact from '@/components/contact';
 import Experience from '@/components/experience';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
 import Intro from '@/components/intro';
 import Projects from '@/components/projects';
 import SectionDivider from '@/components/section-divider';
 import Skills from '@/components/skills';
+import ThemeSwitch from '@/components/theme-switch';
 import getTranslation from '@/lib/i18n/getTranslation';
-import { Locale } from '@/i18n';
 
-type Props = {
-  params: { locale: Locale };
-};
-
-export default async function Home({ params }: Props) {
-  const t = await getTranslation(params.locale);
+export default async function Home() {
+  const t = await getTranslation('de');
 
   return (
     <main className="flex flex-col items-center px-4">
+      <Header
+        t={{
+          links: t('links') as [],
+        }}
+      />
       <Intro
         t={{
           links: t('links') as any[],
@@ -78,6 +81,18 @@ export default async function Home({ params }: Props) {
           },
         }}
       />
+      <Footer
+        t={{
+          title: t('footer.title') as string,
+          legal: t('footer.legal') as string,
+          descreption: t('footer.descreption') as string[],
+          legalModal: {
+            header: t('legalModal.header') as string,
+            body: t('legalModal.body') as string[],
+          },
+        }}
+      />
+      <ThemeSwitch />
     </main>
   );
 }
