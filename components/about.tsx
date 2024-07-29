@@ -30,8 +30,7 @@ export default function About({ t }: Props) {
       <p className="mb-3">
         {t.description[0]}{' '}
         <span className="font-medium">{t.description[1]}</span>
-        {t.description[2]}{' '}
-        <span className="font-medium">{t.description[3]}</span>{' '}
+        {t.description[2]} <span>{t.description[3]}</span>{' '}
         <span className="italic">{t.description[4]}</span> {t.description[5]}{' '}
         <span className="underline">{t.description[6]}</span> {t.description[7]}{' '}
         <span className="font-medium">{t.description[8]}</span>

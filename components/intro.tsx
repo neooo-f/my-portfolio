@@ -77,8 +77,7 @@ export default function Intro({ t }: Props) {
       >
         <span className="font-bold">{t.description[0]}</span> {t.description[1]}{' '}
         <span className="font-bold">{t.description[2]}</span> {t.description[3]}{' '}
-        <span className="font-bold">{t.description[4]}</span> {t.description[5]}{' '}
-        <span className="italic">{t.description[6]}</span>
+        <span>{t.description[4]}</span>
       </motion.h1>
 
       <motion.div
