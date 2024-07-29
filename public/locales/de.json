@@ -28,11 +28,9 @@
   "intro": {
     "description": [
       "Hallo, ich bin Neo.",
-      "Ich bin",
-      "Full-Stack-Entwickler",
-      "mit",
-      "4 Jahren",
-      "Berufserfahrung. Ich entwickle professionelle",
+      "Ich bin gelernter",
+      "Applikationsentwickler.",
+      "Ich entwickle professionelle",
       "Webseiten & Desktop-Applikationen."
     ],
     "contactMe": "Projektanfrage",
@@ -41,16 +39,16 @@
   "about": {
     "heading": "Über mich",
     "description": [
-      "Aktuell schliesse ich meine Lehre als",
-      "Informatiker ",
+      "Vor kurzem schloss ich meine Lehre als",
+      "Informatiker (Fachrichtung Applikationsentwicklung) ",
       "ab. Letztens entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
-      "full-stack web development.",
+      "kontinuierlich neue Technologien dazu.",
       "Am meisten Spass daran macht mir",
       "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu finden. Ich",
       "mag",
-      "das Gefühl, wenn man endlich eine Lösung für ein Problem hat, nachdem man lange daran herumstudiert hat. Meine bevorzugten Technologien sind",
-      "React, Nest.js (Node.js) mit Prisma und MySQL",
-      ". Ich präferiere TypeScript um eine klare Typifizierung zu haben, so dass ich mich nicht mit unnötigen type-errors herumschlagen muss. Zusätzlich eigne ich mir gerne neues Wissen an.",
+      "das Gefühl, wenn man nach langem Nachdenken endlich eine Lösung für ein Problem gefunden hat. Meine bevorzugten Technologien sind",
+      "Java, React, Nest.js (Node.js) mit Prisma und MySQL",
+      ". Im Webbereich bevorzuge ich TypeScript, weil es eine klare Typisierung bietet, sodass ich mich nicht mit unnötigen Typfehlern herumschlagen muss. Zusätzlich eigne ich mir gerne neues Wissen an.",
       "Wenn ich nicht programmiere",
       ", mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
       "neue Erfahrungen zu sammeln."
@@ -113,9 +111,9 @@
       {
         "title": "Ausbildung",
         "location": "Bern, Schweiz",
-        "description": "Ich absolviere meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler.",
+        "description": "Ich absolvierte meine Ausbildung bei der Swisscom Schweiz AG zum Informatiker, Fachrichtung Applikationsentwickler.",
         "icon": "CgWorkAlt",
-        "date": "2020 - Heute"
+        "date": "2020 - 2024"
       },
       {
         "title": "Schule",
@@ -131,7 +129,7 @@
     "descreption": [
       "Bitte kontaktiere mich direkt unter",
       "info.neo.fanetti@gmail.com",
-      "oder über dieses Formular. Ich werde mich innerhalb 14 Tagen melden."
+      "oder über dieses Formular. Ich werde mich schnellstmöglich melden."
     ],
     "placeholder": {
       "email": "Deine E-Mail",
