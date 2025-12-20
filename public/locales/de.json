@@ -47,39 +47,39 @@
       "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu finden. Ich",
       "mag",
       "das Gefühl, wenn man nach langem Nachdenken endlich eine Lösung für ein Problem gefunden hat. Meine bevorzugten Technologien sind",
-      "Java, React, Nest.js (Node.js) mit Prisma und MySQL",
+      "Next.js (React.js), Nest.js (Node.js) mit Prisma und MySQL",
       ". Im Webbereich bevorzuge ich TypeScript, weil es eine klare Typisierung bietet, sodass ich mich nicht mit unnötigen Typfehlern herumschlagen muss. Zusätzlich eigne ich mir gerne neues Wissen an.",
       "Wenn ich nicht programmiere",
-      ", mache ich sehr gerne Sport im Allgemeinen, treffe mich mit Freunden und spiele Fussball. Zusätzlich mag ich es",
-      "neue Erfahrungen zu sammeln."
+      ", mache ich sehr gerne Kraft- und Ausdauersport oder treffe mich mit Freunden zum Fußballspielen. Zusätzlich sammle ich",
+      "gerne neue Erfahrungen."
     ]
   },
   "projects": {
     "heading": "Meine Projekte",
     "data": [
       {
-        "title": "Nespresso Kaffeeverwaltung",
-        "description": "Eine Fullstack Applikation um elektronisch den Zugriff auf seine Kaffeemaschine zu verwalten.",
-        "tags": ["Vue", "PHP", "Frontend", "Backend"],
-        "imageName": "nespresso"
+        "title": "Socketchat",
+        "description": "Eine Fullstack-Chat-Applikation, um mit seinen Freunden zu chatten.",
+        "tags": ["React", "Nest", "Socket.IO", "Frontend", "Backend"],
+        "imageName": "socketchat"
       },
       {
         "title": "The Movie Database",
-        "description": "Eine Frontend Applikation um eine Übersicht auf aktuelle Filme zu erhalten.",
+        "description": "Eine Frontend-Applikation, um eine Übersicht über aktuell laufende Filme zu erhalten.",
         "tags": ["Vue", "API", "Frontend"],
         "imageName": "moviedb"
+      },
+      {
+        "title": "Game Of Life",
+        "description": "Eine Nachahmung des zellulären Automaten von John Conway.",
+        "tags": ["JavaScript", "HTML Canvas", "mathematics"],
+        "imageName": "gameoflife"
       },
       {
         "title": "ICT-Skills Evaluation Tool",
         "description": "Eine Desktop Applikation mit welcher man einen Wettbewerb tracken und Teilnehmer evaluieren kann.",
         "tags": ["Java", "JavaFX", "Threads"],
         "imageName": "ictskills"
-      },
-      {
-        "title": "Kontakverwaltung",
-        "description": "Eine Frontend Applikation um seine Kontake abzuspeichern und anschliessend zu verwalten",
-        "tags": ["Vue", "Frontend", "Formular"],
-        "imageName": "contacts"
       }
     ]
   },

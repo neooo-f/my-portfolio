@@ -9,6 +9,8 @@ import contacts from '@/public/images/contacts.png';
 import ictskills from '@/public/images/ictskills.png';
 import moviedb from '@/public/images/moviedb.png';
 import nespresso from '@/public/images/nespresso.png';
+import socketchat from '@/public/images/socketchat.png';
+import gameoflife from '@/public/images/gameoflife.png';
 
 type ProjectProps = {
   title: string;
@@ -32,6 +34,8 @@ export default function Project({
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const imageMapping = new Map<string, StaticImageData>([
+    ['gameoflife', gameoflife],
+    ['socketchat', socketchat],
     ['nespresso', nespresso],
     ['contacts', contacts],
     ['ictskills', ictskills],
