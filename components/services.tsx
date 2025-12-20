@@ -21,11 +21,11 @@ export default function Services({ t }: Props) {
       <SectionHeading>{t.heading}</SectionHeading>
       <div>
         {/* 
-            3 Icons (Desktop, Mobile and Web) with Naming
+            - Idea: 3 Icons (Desktop, Mobile and Web) with Naming
             and under the icons a short description that i make
             professional and custom websites.
 
-            Maybe restructure complete website to promote my services with
+            - Maybe restructure complete website to promote my services with
             different routes.
         */}
       </div>
