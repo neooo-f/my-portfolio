@@ -28,8 +28,8 @@
   "intro": {
     "description": [
       "Hallo, ich bin Neo.",
-      "Ich bin gelernter",
-      "Applikationsentwickler.",
+      "Ich bin",
+      "Full Stack Developer.",
       "Ich entwickle professionelle",
       "Webseiten & Desktop-Applikationen."
     ],
@@ -39,9 +39,9 @@
   "about": {
     "heading": "Über mich",
     "description": [
-      "Vor kurzem schloss ich meine Lehre als",
+      "Im Sommer 2024 schloss ich meine Lehre als",
       "Informatiker (Fachrichtung Applikationsentwicklung) ",
-      "ab. Letztens entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
+      "ab. Kurz darauf entschied ich mich meine Leidenschaft für die Softwareentwicklung zu erweitern. Ich begann an eigenen Projekten zu arbeiten und lernte",
       "kontinuierlich neue Technologien dazu.",
       "Am meisten Spass daran macht mir",
       "die Möglichkeit kreativ zu sein, als auch effiziente Lösungen für tägliche Probleme zu finden. Ich",
@@ -50,7 +50,7 @@
       "Next.js (React.js), Nest.js (Node.js) mit Prisma und MySQL",
       ". Im Webbereich bevorzuge ich TypeScript, weil es eine klare Typisierung bietet, sodass ich mich nicht mit unnötigen Typfehlern herumschlagen muss. Zusätzlich eigne ich mir gerne neues Wissen an.",
       "Wenn ich nicht programmiere",
-      ", mache ich sehr gerne Kraft- und Ausdauersport oder treffe mich mit Freunden zum Fußballspielen. Zusätzlich sammle ich",
+      ", mache ich Kampf- und Kraftsport oder treffe mich mit Freunden zum Fußballspielen. Zusätzlich sammle ich",
       "gerne neue Erfahrungen."
     ]
   },
